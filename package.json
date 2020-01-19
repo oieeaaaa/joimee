@@ -6,11 +6,13 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "lint-pages:write": "eslint --ignore-path .eslintignore --fix ./pages/**/*.js",
-    "lint-components:write": "eslint --ignore-path .eslintignore --fix ./components/**/*.js"
+    "fix:eslint": "eslint --fix ./ --ext .js --ext .jsx",
+    "fix:stylelint": "stylelint --fix ./**/*.{css,scss,sass}",
+    "fix": "npm run fix:eslint && npm run fix:stylelint"
   },
   "dependencies": {
     "@zeit/next-sass": "^1.0.1",
+    "babel-plugin-module-resolver": "^4.0.0",
     "isomorphic-unfetch": "^3.0.0",
     "next": "9.1.2",
     "prop-types": "^15.7.2",
@@ -29,6 +31,10 @@
     "eslint-plugin-react": "^7.16.0",
     "eslint-plugin-react-hooks": "^2.2.0",
     "node-sass": "^4.13.0",
-    "styled-jsx-plugin-sass": "^1.0.0"
+    "styled-jsx-plugin-sass": "^1.0.0",
+    "stylelint": "^13.0.0",
+    "stylelint-config-recommended-scss": "^4.1.0",
+    "stylelint-config-standard": "^19.0.0",
+    "stylelint-scss": "^3.13.0"
   }
 }

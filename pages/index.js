@@ -1,2 +1,10 @@
-const App = () => <h1>This is app.</h1>;
-export default App;
+import React from 'react';
+import Layout from 'components/Layout/layout';
+
+const Home = () => (
+  <Layout title="Home">
+    <h1>This is home</h1>
+  </Layout>
+);
+
+export default Home;
