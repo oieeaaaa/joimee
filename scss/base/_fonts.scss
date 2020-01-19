@@ -1,1 +1,48 @@
-$helvetica: 'Helvetica', sans-serif;
+$font-root-size: 10;
+$agp: 'Adobe Garamond Pro', serif;
+$me: 'Modern Era', sans-serif;
+
+// Adobe Garamond Pro
+@font-face {
+  font-family: 'Adobe Garamond Pro';
+  src: url('/fonts/adobe-garamond-pro.otf');
+  font-weight: normal, 400;
+}
+
+// Modern Era
+@font-face {
+  font-family: 'Modern Era';
+  src: url('/fonts/ModernEra-Light.otf');
+  font-weight: light, 300;
+}
+
+@font-face {
+  font-family: 'Modern Era';
+  src: url('/fonts/ModernEra-Regular.otf');
+  font-weight: normal, 400;
+}
+
+@font-face {
+  font-family: 'Modern Era';
+  src: url('/fonts/ModernEra-Italic.otf');
+  font-weight: normal, 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Modern Era';
+  src: url('/fonts/ModernEra-Medium.otf');
+  font-weight: medium, 500;
+}
+
+@font-face {
+  font-family: 'Modern Era';
+  src: url('/fonts/ModernEra-Bold.otf');
+  font-weight: bold, 600;
+}
+
+@font-face {
+  font-family: 'Modern Era';
+  src: url('/fonts/ModernEra-Black.otf');
+  font-weight: black, 700;
+}

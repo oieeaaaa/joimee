@@ -1,16 +1,17 @@
 * {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 html {
-	font-size: 10px;
+  font-size: #{$font-root-size}px; /* stylelint-disable */
 }
 
 body {
-	font-family: $helvetica;
-	line-height: 1.7;
+  font-family: $me;
+  font-weight: 400;
+  line-height: 1.7;
 }
 
 body.hide {
