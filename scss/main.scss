@@ -5,6 +5,7 @@
 
 // utils
 @import './utils/rem';
+@import './utils/decorators';
 
 // layouts
 @import './layouts/grid';
@@ -15,3 +16,4 @@
 // commons
 
 // components
+@import 'components/Header/header';
