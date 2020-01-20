@@ -22,6 +22,8 @@
     "rules": {
       "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
       "no-use-before-define": [0],
-      "import/no-unresolved": [0]
+      "import/no-unresolved": [0],
+      "jsx-a11y/anchor-is-valid": [0],
+      "arrow-parens": [0]
     }
 }
