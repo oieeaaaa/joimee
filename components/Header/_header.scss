@@ -1,0 +1,65 @@
+// =========== remove this later ===========
+body {
+  height: rem(5000);
+}
+// =========== remove this later ===========
+
+.header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  transition: transform .25s ease;
+
+  &.scrolled {
+    background-color: $white;
+    box-shadow: $shadow-0;
+  }
+
+  &.hidden {
+    transform: translateY(-100%);
+    box-shadow: unset;
+  }
+
+  &-nav {
+    grid-column: 2 / -2;
+    display: flex;
+    justify-content: space-between;
+    padding: rem(20) 0;
+  }
+
+  &-nav__link {
+    position: relative;
+    text-decoration: none;
+    text-transform: lowercase;
+    line-height: 1.25;
+    font-family: $me;
+    font-weight: 400;
+    color: $gray;
+    letter-spacing: rem(.48);
+
+    @include desktop {
+      &:hover {
+        color: $persimmon;
+      }
+    }
+  }
+
+  &-nav__link.active {
+    color: $persimmon;
+  }
+
+  &-nav__link.active::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: rem(10);
+    height: rem(10);
+    transform: translateY(-50%) translateX(-200%); // a tiny space between text and this element
+    background: url('/icons/active-nav-indicator.svg');
+  }
+
+  &-nav__link--center {
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+}
