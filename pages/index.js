@@ -1,9 +1,10 @@
 import React from 'react';
 import Layout from 'components/Layout/layout';
+import Hero from 'components/Hero/hero';
 
 const Home = () => (
   <Layout title="Home">
-    <h1>This is home</h1>
+    <Hero />
   </Layout>
 );
 
