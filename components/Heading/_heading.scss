@@ -1,0 +1,21 @@
+.heading {
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  grid-column-gap: rem(10);
+  font-weight: 600;
+  font-size: rem(16);
+  letter-spacing: rem(3.2);
+  text-transform: uppercase;
+  white-space: nowrap;
+  color: $persimmon;
+
+
+  &::after {
+    content: '';
+    display: inline-block;
+    align-self: center;
+    width: 100%;
+    height: rem(1);
+    background-color: $persimmon;
+  }
+}

@@ -1,0 +1,17 @@
+.recent-projects {
+  margin-top: rem(90);
+
+  .heading {
+    grid-column: 2 / -2;
+    margin-bottom: rem(30);
+  }
+
+  .recent-projects__item {
+    grid-column: 2 / -2;
+    text-decoration: none;
+  }
+
+  .grid > .recent-projects__item:not(:last-child) {
+    margin-bottom: rem(60);
+  }
+}
