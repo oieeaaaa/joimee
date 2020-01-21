@@ -1,0 +1,35 @@
+.post-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  &__title {
+    font-weight: 600;
+    letter-spacing: rem(.48);
+    color: $persimmon;
+  }
+
+  & > &__title {
+    margin-bottom: rem(10);
+  }
+
+  &__excerpt {
+    line-height: 1.34;
+    letter-spacing: rem(.48);
+    font-weight: 600;
+    color: $gray;
+  }
+
+  & > &__excerpt {
+    margin-bottom: rem(20);
+  }
+
+  &__date {
+    font-size: rem(14);
+    font-weight: 300;
+    line-height: 1.34;
+    letter-spacing: rem(.48);
+    color: $gray;
+  }
+}
