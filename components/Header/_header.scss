@@ -2,7 +2,10 @@
   position: sticky;
   top: 0;
   left: 0;
-  transition: transform .25s ease;
+  transition-property: transform, box-shadow, background-color;
+  transition-duration: .25s;
+  transition-timing-function: ease;
+  z-index: 100;
 
   &.scrolled {
     background-color: $white;
@@ -27,7 +30,7 @@
     text-transform: lowercase;
     line-height: 1.25;
     font-family: $me;
-    font-weight: 400;
+    font-weight: 300;
     color: $gray;
     letter-spacing: rem(.48);
 
@@ -53,7 +56,7 @@
   }
 
   &-nav__link--center {
-    font-weight: bold;
+    font-weight: 600;
     text-transform: uppercase;
   }
 }

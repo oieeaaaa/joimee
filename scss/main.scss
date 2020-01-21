@@ -6,15 +6,18 @@
 // utils
 @import './utils/rem';
 @import './utils/decorators';
+@import './utils/set-width';
 
 // layouts
 @import './layouts/grid';
 @import './layouts/aspect-ratio';
 @import './layouts/alignment';
-@import './layouts/set-column';
 
 // commons
 
 // components
 @import 'components/Header/header';
 @import 'components/Hero/hero';
+@import 'components/Heading/heading';
+@import 'components/RecentProjects/recent-projects';
+@import 'components/Card/card';
