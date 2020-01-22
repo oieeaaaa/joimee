@@ -1,0 +1,15 @@
+.input {
+  width: 100%;
+  font-size: rem(16);
+  font-weight: 600;
+  letter-spacing: rem(.48);
+  padding: rem(13) rem(14);
+  border: none;
+  color: $mine-shaft;
+  background-color: $white;
+  box-shadow: inset 0 0 0 rem(1) $persimmon;
+
+  &::placeholder {
+    color: $gray;
+  }
+}

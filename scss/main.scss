@@ -14,6 +14,7 @@
 @import './layouts/alignment';
 
 // commons
+@import './commons/with-dashes';
 
 // components
 @import 'components/Header/header';
@@ -23,3 +24,6 @@
 @import 'components/Card/card';
 @import 'components/RecentPosts/recent-posts';
 @import 'components/PostCard/post-card';
+@import 'components/Input/input';
+@import 'components/Button/button';
+@import 'components/Subscribe/subscribe';
