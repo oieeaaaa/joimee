@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef } from 'react';
 import throttle from 'lodash.throttle';
 import PropTypes from 'prop-types';
 import { withRouter } from 'next/router';
@@ -6,38 +6,35 @@ import Link from 'next/link';
 import navList from './navList';
 
 const Header = ({ router, scrollOffset }) => {
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [isHidden, setIsHidden] = useState(false);
-  const [headerClass, setHeaderClass] = useState('header');
+  const header = useRef(null);
 
   useEffect(() => {
+    if (!header) return false;
+    const { current: h } = header;
     let prevScroll = 0;
+
     const handleScroll = throttle(() => {
       // with offset check if scrolled
-      setIsScrolled(window.scrollY > scrollOffset);
+      if (window.scrollY > scrollOffset) {
+        h.classList.add('scrolled');
+      } else {
+        h.classList.remove('scrolled');
+      }
 
       // check scroll direction
-      setIsHidden(prevScroll < window.scrollY);
+      if (prevScroll < window.scrollY) {
+        h.classList.add('hidden');
+      } else {
+        h.classList.remove('hidden');
+      }
+
       prevScroll = window.scrollY;
     }, 500);
 
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
 
-  useEffect(() => {
-    let newHeaderClass = 'header';
-
-    if (isScrolled) {
-      newHeaderClass += ' scrolled';
-    }
-
-    if (isHidden) {
-      newHeaderClass += ' hidden';
-    }
-
-    setHeaderClass(newHeaderClass);
-  }, [isScrolled, isHidden]);
+    return () => window.removeEventListener('scroll', handleScroll); // cleanup
+  }, [header]);
 
   function renderLinks(links) {
     const [, currentRoute] = router.pathname.split('/'); // get the base path
@@ -64,7 +61,7 @@ const Header = ({ router, scrollOffset }) => {
   }
 
   return (
-    <header className={headerClass}>
+    <header ref={header} className="header">
       <div className="grid">
         <nav className="header-nav">
           {renderLinks(navList)}

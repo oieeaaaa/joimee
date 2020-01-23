@@ -6,6 +6,7 @@
   transition-duration: .25s;
   transition-timing-function: ease;
   z-index: 100;
+  will-change: transform;
 
   &.scrolled {
     background-color: $white;
