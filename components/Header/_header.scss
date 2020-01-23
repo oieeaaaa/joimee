@@ -41,10 +41,6 @@
     }
   }
 
-  &-nav__link.active {
-    color: $persimmon;
-  }
-
   &-nav__link.active::before {
     content: '';
     position: absolute;

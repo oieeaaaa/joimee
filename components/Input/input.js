@@ -1,13 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Input = ({ className, ...rest }) => {
-  const inputClass = className ? `${className} input` : 'input';
-
-  return (
-    <input className={inputClass} type="text" {...rest} /> // eslint-disable-line
-  );
-};
+const Input = ({ className, ...rest }) => (
+  <input className={className ? `${className} input` : 'input'} type="text" {...rest} />
+);
 
 Input.defaultProps = {
   className: '',

@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import Text3D from 'components/Text3D/text3D';
 
 const Hero = () => (
   <section className="hero">
@@ -7,8 +8,8 @@ const Hero = () => (
       <img className="hero__bg" src="/icons/hero-bg.svg" alt="Joimee Tan Cajandab" />
       <Link href="/about">
         <a className="hero__title">
-          <span className="hero__title-text" title="oiee">OIEE</span>
-          <span className="hero__title-text" title="aaaa">AAAA</span>
+          <Text3D className="hero__title-text" text="oiee" />
+          <Text3D className="hero__title-text" text="aaaa" />
         </a>
       </Link>
     </div>
