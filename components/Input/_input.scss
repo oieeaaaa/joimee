@@ -7,7 +7,7 @@
   border: none;
   color: $mine-shaft;
   background-color: $white;
-  box-shadow: inset 0 0 0 rem(1) $persimmon;
+  box-shadow: $shadow-solid--persimmon;
 
   &::placeholder {
     color: $gray;
