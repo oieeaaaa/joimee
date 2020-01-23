@@ -15,6 +15,7 @@
 
 // commons
 @import './commons/with-dashes';
+@import './commons/states';
 
 // components
 @import 'components/Header/header';
@@ -27,3 +28,5 @@
 @import 'components/Input/input';
 @import 'components/Button/button';
 @import 'components/Subscribe/subscribe';
+@import 'components/Text3D/text-3D';
+@import 'components/Footer/footer';
