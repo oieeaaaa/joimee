@@ -1,0 +1,24 @@
+.text-3D {
+  --color: #{$mine-shaft}; // without expression the value would be literal
+
+  position: relative;
+  font-size: (76 / 375) * 100vw; // responsive size
+  font-weight: bold;
+  line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: rem(2.28);
+  color: var(--color);
+  z-index: 99;
+
+  &::after {
+    content: attr(title);
+    position: absolute;
+    top: rem(05);
+    right: rem(05);
+    color: transparent;
+    -webkit-text-stroke: rem(1) var(--color);
+    -moz-text-stroke: rem(1) var(--color);
+    -o-text-stroke: rem(1) var(--color);
+    z-index: -1;
+  }
+}

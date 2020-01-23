@@ -1,0 +1,85 @@
+.footer {
+  background-color: $mercury;
+  margin-top: rem(90);
+
+  &__title {
+    text-decoration: none;
+  }
+
+  &__title > .text-3D {
+    --color: #{$gray};
+  }
+
+  &__title.active > .text-3D {
+    --color: #{$persimmon};
+  }
+
+  .grid > &__title {
+    grid-column: 2 / -2;
+    justify-self: start;
+    margin: rem(30) 0;
+  }
+
+  &-list {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+  }
+
+  .grid > &-list {
+    justify-self: start;
+  }
+
+  .grid > &-list:nth-child(2) {
+    grid-column: 2 / 6;
+  }
+
+  .grid > &-list:nth-child(3) {
+    grid-column: 6 / -2;
+  }
+
+  &-list__title {
+    font-size: rem(14);
+    font-weight: 600;
+    letter-spacing: rem(.42);
+    color: $gray;
+    text-transform: uppercase;
+  }
+
+  &-list > &-list__title {
+    margin-bottom: rem(20);
+  }
+
+  &-list__item {
+    font-size: rem(14);
+    font-weight: 400;
+    letter-spacing: rem(.42);
+    color: $gray;
+    text-decoration: none;
+  }
+
+  &-list > &-list__item:not(:last-child) {
+    margin-bottom: rem(10);
+  }
+
+  &-bottom {
+    height: rem(30);
+    background-color: $persimmon;
+
+    @include center-content;
+  }
+
+  .grid > &-bottom {
+    grid-column: 1 / -1;
+    margin-top: rem(70);
+  }
+
+  &-bottom__text {
+    font-size: rem(12);
+    font-weight: 600;
+    color: $white;
+    text-transform: uppercase;
+    letter-spacing: rem(.36);
+  }
+}
