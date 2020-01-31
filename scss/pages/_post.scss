@@ -1,0 +1,64 @@
+.post {
+  margin-top: rem(60);
+
+  &__image-container {
+    margin-bottom: rem(20);
+
+    @include aspect-ratio(300, 128);
+  }
+
+  &__image {
+    width: 100%;
+  }
+
+  .grid > &__image-container {
+    grid-column: 2 / -2;
+  }
+
+  &__title {
+    font-family: $agp;
+    font-weight: 600;
+    font-size: rem(18);
+    letter-spacing: rem(.54);
+    text-transform: uppercase;
+    color: $mine-shaft;
+  }
+
+  .grid > &__title {
+    grid-column: 2 / -2;
+    margin-bottom: rem(30);
+  }
+
+  .grid > &__content {
+    grid-column: 2 / -2;
+    margin-bottom: rem(30);
+  }
+
+  &__date {
+    font-size: rem(14);
+    font-weight: 300;
+    line-height: 1.34;
+    letter-spacing: rem(.42);
+    text-align: right;
+    color: $gray;
+  }
+
+  .grid > &__date {
+    grid-column: 2 / -2;
+    margin-bottom: rem(60);
+  }
+
+  .grid > .xdivider {
+    grid-column: 2 / -2;
+  }
+
+  .grid > &-comment {
+    grid-column: 2 / -2;
+    margin: rem(60) 0;
+  }
+
+  .grid > &-comment-list {
+    grid-column: 2 / -2;
+    margin-top: rem(60);
+  }
+}
