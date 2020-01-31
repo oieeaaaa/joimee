@@ -1,6 +1,7 @@
 .card {
   display: grid;
   grid-template-columns: set-width(7, 8) 1fr;
+  overflow: hidden;
 
   &__img-container {
     @include aspect-ratio(263, 243);
