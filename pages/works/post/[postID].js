@@ -15,8 +15,7 @@ query Post($id: ID) {
     content,
     image {
       url
-    },
-    slug
+    }
   }
 }
 `;
