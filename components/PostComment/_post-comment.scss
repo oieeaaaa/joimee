@@ -1,0 +1,48 @@
+.post-comment {
+  display: flex;
+  flex-direction: column;
+
+  &__title {
+    font-size: rem(18);
+    line-height: 1.64;
+    letter-spacing: rem(.54);
+    text-transform: uppercase;
+    color: $persimmon;
+  }
+
+  & > &__title {
+    margin-bottom: rem(20);
+  }
+
+  & > &__name {
+    margin-bottom: rem(20);
+  }
+
+  & > &__message {
+    margin-bottom: rem(30);
+  }
+
+  & > .button {
+    width: set-width(4, 8);
+    align-self: flex-end;
+  }
+}
+
+.label {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  &__text {
+    font-size: rem(16);
+    line-height: 1.63;
+    letter-spacing: rem(.48);
+    font-weight: 600;
+    text-transform: lowercase;
+    color: $gray;
+  }
+
+  & > &__text {
+    margin-bottom: rem(10);
+  }
+}
