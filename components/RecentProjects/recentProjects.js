@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import Heading from 'components/Heading/heading';
 import Link from 'next/link';
 import { gql } from 'apollo-boost';
@@ -35,7 +35,7 @@ const RecentProjects = () => {
           <Link
             key={project.id}
             href="/works/project/[projectID]"
-            as={`/works/project/${project.slug}`}
+            as={`/works/project/${project.id}`}
           >
             <a className="recent-projects__item">
               <Card

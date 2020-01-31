@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import Heading from 'components/Heading/heading';
 import Link from 'next/link';
 import { gql } from 'apollo-boost';
@@ -27,7 +27,7 @@ const RecentPosts = () => {
       <div className="grid">
         <Heading text="Recent Posts" />
         {data.posts.map(post => (
-          <Link key={post.id} href="/works/post/[post-id]" as={`/works/post/${post.slug}`}>
+          <Link key={post.id} href="/works/post/[postID]" as={`/works/post/${post.id}`}>
             <a className="recent-posts__item">
               <PostCard title={post.title} excerpt={post.excerpt} date={post.createdAt} />
             </a>
