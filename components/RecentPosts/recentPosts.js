@@ -7,7 +7,7 @@ import PostCard from 'components/PostCard/postCard';
 
 const GET_RECENT_POSTS = gql`
   query {
-    posts(orderBy: createAt_ASC, last: 3) {
+    posts(orderBy: createdAt_ASC, last: 3) {
       title,
       id,
       slug,
