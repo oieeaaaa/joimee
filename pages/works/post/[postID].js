@@ -1,55 +1,52 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
+import Head from 'next/head';
 import PropTypes from 'prop-types';
 import { withRouter } from 'next/router';
-import gql from 'graphql-tag';
-import client from 'js/client';
-import includeAsset from 'js/includeAsset';
-import Layout from 'components/Layout/layout';
+import { useLazyQuery } from '@apollo/react-hooks';
+import { gql } from 'apollo-boost';
+import { withLayout } from 'components/Layout/layout';
 
-const query = gql`
-  query PostItem($slug: String!) {
-    posts(slug: $slug) @rest(type: "PostItem", path: "/entries?content_type=posts&fields.slug={args.slug}") {
-      total,
-      sys,
-      includes,
-      items @type(name: "PostItem") {
-        sys @type(name: "PostItem") {
-          id,
-          createdAt
-        },
-        fields
-      }
-    }
+const GET_POST = gql`
+query Post($id: ID) {
+  post(where: { id: $id }) {
+    id,
+    title,
+    createdAt,
+    content,
+    image {
+      url
+    },
+    slug
   }
+}
 `;
 
 const Post = ({ router }) => {
-  const [post, setPost] = useState({});
-  const [isLoading, setIsLoading] = useState(true);
+  const [loadPost, { loading, data }] = useLazyQuery(
+    GET_POST,
+    {
+      variables: {
+        id: '',
+      },
+    },
+  );
 
   useEffect(() => {
-    if (!router.query.postID) return;
+    const id = router.query.postID;
+    if (!id) return;
 
-    client.query(
-      {
-        query,
-        variables: {
-          slug: router.query.postID,
-        },
-      },
-    ).then(({ data }) => {
-      const posts = includeAsset(data.posts);
-      setPost(posts.items[0]);
-      setIsLoading(false);
-    });
+    loadPost({ variables: { id } });
   }, [router]);
 
-  if (isLoading) return 'Loading...';
+  if (loading || !data) return <div>Loading...</div>;
 
   return (
-    <Layout title={post.fields.title}>
-      <h1>{post.fields.title}</h1>
-    </Layout>
+    <div className="post">
+      <Head>
+        <title>{data.post.title}</title>
+      </Head>
+      <h1>{data.post.title}</h1>
+    </div>
   );
 };
 
@@ -62,4 +59,4 @@ Post.propTypes = {
   }).isRequired,
 };
 
-export default withRouter(Post);
+export default withLayout(withRouter(Post), { title: 'Post' });
