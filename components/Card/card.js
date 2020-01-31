@@ -23,10 +23,14 @@ const Card = ({ title, imgLink, color }) => (
   </div>
 );
 
+Card.defaultProps = {
+  color: '#e2e2e2',
+};
+
 Card.propTypes = {
   title: PropTypes.string.isRequired,
-  color: PropTypes.string.isRequired,
   imgLink: PropTypes.string.isRequired,
+  color: PropTypes.string,
 };
 
 export default Card;

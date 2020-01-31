@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Heading from 'components/Heading/heading';
 import Link from 'next/link';
 import { gql } from 'apollo-boost';
