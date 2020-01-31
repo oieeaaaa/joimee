@@ -1,29 +1,54 @@
 import React from 'react';
 import Heading from 'components/Heading/heading';
 import Link from 'next/link';
-import Card, { FAKE_PROJECTS } from 'components/Card/card';
+import { gql } from 'apollo-boost';
+import { useQuery } from '@apollo/react-hooks';
+import Card from 'components/Card/card';
 
-const RecentProjects = () => (
-  <section className="recent-projects">
-    <div className="grid">
-      <Heading text="Recent Projects" />
-      {FAKE_PROJECTS.map(project => (
-        <Link
-          key={project.title}
-          href="/works/project/[projectID]"
-          as={`/works/project/${project.path}`}
-        >
-          <a className="recent-projects__item">
-            <Card
-              title={project.title}
-              imgLink={project.imgLink}
-              color={project.color}
-            />
-          </a>
-        </Link>
-      ))}
-    </div>
-  </section>
-);
+const GET_RECENT_PROJECTS = gql`
+query {
+  projects(orderBy: createdAt_ASC, last: 3) {
+    id,
+    title,
+    createdAt,
+    theme {
+      hex
+    },
+    image {
+      url
+    },
+    slug
+  }
+}
+`;
+
+const RecentProjects = () => {
+  const { loading, error, data } = useQuery(GET_RECENT_PROJECTS);
+
+  if (loading) return <div>Loading...</div>;
+  if (error) return <div>Error!!!</div>;
+  return (
+    <section className="recent-projects">
+      <div className="grid">
+        <Heading text="Recent Projects" />
+        {data.projects.map(project => (
+          <Link
+            key={project.id}
+            href="/works/project/[projectID]"
+            as={`/works/project/${project.slug}`}
+          >
+            <a className="recent-projects__item">
+              <Card
+                title={project.title}
+                imgLink={project.image.url}
+                color={project.theme.hex}
+              />
+            </a>
+          </Link>
+        ))}
+      </div>
+    </section>
+  );
+};
 
 export default RecentProjects;

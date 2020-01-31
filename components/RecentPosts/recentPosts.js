@@ -1,21 +1,41 @@
 import React from 'react';
 import Heading from 'components/Heading/heading';
 import Link from 'next/link';
-import PostCard, { FAKE_POSTS } from 'components/PostCard/postCard';
+import { gql } from 'apollo-boost';
+import { useQuery } from '@apollo/react-hooks';
+import PostCard from 'components/PostCard/postCard';
 
-const RecentPosts = () => (
-  <section className="recent-posts">
-    <div className="grid">
-      <Heading text="Recent Posts" />
-      {FAKE_POSTS.map(post => (
-        <Link key={post.title} href="/works/post/[post-id]" as={`/works/post/${post.path}`}>
-          <a className="recent-posts__item">
-            <PostCard title={post.title} excerpt={post.excerpt} date={post.date} />
-          </a>
-        </Link>
-      ))}
-    </div>
-  </section>
-);
+const GET_RECENT_POSTS = gql`
+  query {
+    posts(orderBy: createAt_ASC, last: 3) {
+      title,
+      id,
+      slug,
+      excerpt,
+      createdAt
+    }
+  }
+`;
+
+const RecentPosts = () => {
+  const { loading, error, data } = useQuery(GET_RECENT_POSTS);
+
+  if (loading) return <div>Loading...</div>;
+  if (error) return <div>Error!!!</div>;
+  return (
+    <section className="recent-posts">
+      <div className="grid">
+        <Heading text="Recent Posts" />
+        {data.posts.map(post => (
+          <Link key={post.id} href="/works/post/[post-id]" as={`/works/post/${post.slug}`}>
+            <a className="recent-posts__item">
+              <PostCard title={post.title} excerpt={post.excerpt} date={post.createdAt} />
+            </a>
+          </Link>
+        ))}
+      </div>
+    </section>
+  );
+};
 
 export default RecentPosts;
