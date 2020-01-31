@@ -1,0 +1,20 @@
+.xdivider {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &::before,
+  &::after {
+    content: '';
+    display: inline-block;
+    width: (132 / 300) * 100%;
+    height: rem(1);
+    background-color: $gray;
+  }
+
+  &__triangle {
+    border: ((7.5 / 375) * 100vw) solid transparent;
+    border-top-color: $gray;
+    transform: translateY(25%);
+  }
+}
