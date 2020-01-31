@@ -31,8 +31,18 @@ const Layout = ({ title, children }) => (
   </ApolloProvider>
 );
 
+export const withLayout = Component => props => (
+  <Layout {...props}>
+    <Component />
+  </Layout>
+);
+
+Layout.defaultProps = {
+  title: 'Bok',
+};
+
 Layout.propTypes = {
-  title: PropTypes.string.isRequired,
+  title: PropTypes.string,
   children: PropTypes.any.isRequired, // eslint-disable-line
 };
 
