@@ -2,10 +2,11 @@
   width: 100%;
   min-height: rem(100);
   padding: rem(13) rem(14);
-  border: rem(1) solid $silver;
   color: $mine-shaft;
   font-family: $me;
   font-size: rem(16);
   font-weight: 600;
   letter-spacing: rem(.48);
+  box-shadow: 0 0 0 rem(1) $silver;
+  border: none;
 }
