@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { withRouter } from 'next/router';
 import { useLazyQuery, useMutation } from '@apollo/react-hooks';
 import { gql } from 'apollo-boost';
-import ReactMarkdown from 'react-markdown';
+import Markdown from 'components/Markdown/markdown';
 import { withLayout } from 'components/Layout/layout';
 import XDivider from 'components/XDivider/xdivider';
 import PostComment from 'components/PostComment/postComment';
@@ -123,9 +123,7 @@ const Post = ({ router }) => {
           />
         </figure>
         <h1 className="post__title">{data.post.title}</h1>
-        <article className="post__content">
-          <ReactMarkdown source={data.post.content} />
-        </article>
+        <Markdown content={data.post.content} />
         <p className="post__date">
           {(new Date(data.post.createdAt)).toLocaleDateString('en-US', dateConfig)}
         </p>
