@@ -1,0 +1,37 @@
+.md {
+  &__p {
+    font-family: $agp;
+    line-height: 1.63;
+    letter-spacing: rem(.48);
+    color: $mine-shaft;
+  }
+
+  & > &__p:not(:last-child) {
+    margin-bottom: rem(30);
+  }
+
+  &__heading {
+    font-family: $me;
+    line-height: 1.63;
+    letter-spacing: rem(.48);
+    color: $mine-shaft;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+
+  & > &__heading {
+    margin: rem(10) 0;
+  }
+
+  &__heading--1 {
+    font-size: rem(18);
+  }
+
+  &__heading--2 {
+    font-size: rem(18);
+  }
+
+  &__heading--3 {
+    font-size: rem(16);
+  }
+}
