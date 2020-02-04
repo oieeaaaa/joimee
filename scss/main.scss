@@ -17,9 +17,6 @@
 @import './commons/with-dashes';
 @import './commons/states';
 
-// pages
-@import './pages/post';
-
 // components
 @import 'components/Header/header';
 @import 'components/Hero/hero';
@@ -38,3 +35,7 @@
 @import 'components/TextArea/textarea';
 @import 'components/PostCommentList/post-comment-list';
 @import 'components/Markdown/markdown';
+
+// pages
+@import './pages/post';
+@import './pages/project';
