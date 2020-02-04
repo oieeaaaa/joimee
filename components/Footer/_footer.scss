@@ -6,10 +6,6 @@
     text-decoration: none;
   }
 
-  &__title > .text-3D {
-    --color: #{$gray};
-  }
-
   &__title.active > .text-3D {
     --color: #{$persimmon};
   }
@@ -66,6 +62,7 @@
   &-bottom {
     height: rem(30);
     background-color: $persimmon;
+    display: flex;
 
     @include center-content;
   }
