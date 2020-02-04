@@ -51,7 +51,7 @@ const Footer = ({ router }) => {
       <div className="grid">
         <Link href="/">
           <a className={pathname.length === 1 ? 'footer__title active' : 'footer__title'}>
-            <Text3D text="bok" />
+            <Text3D text="bok" color="#838383" />
           </a>
         </Link>
         <div className="footer-list">
