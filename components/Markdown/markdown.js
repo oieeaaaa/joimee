@@ -11,6 +11,7 @@ const Markdown = ({ content }) => {
       const headingClassName = `md__heading md__heading--${level}`;
       return <CustomHeading className={headingClassName}>{children}</CustomHeading>;
     },
+    image: ({ alt, src }) => <img className="md__img" alt={alt} src={src} />,
   };
 
   return (
