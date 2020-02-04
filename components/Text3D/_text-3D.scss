@@ -13,8 +13,8 @@
   &::after {
     content: attr(title);
     position: absolute;
-    top: rem(05);
-    right: rem(05);
+    top: 5 / 111 * 100%;
+    right: 5 / 254.344 * 100%;
     color: transparent;
     -webkit-text-stroke: rem(1) var(--color);
     -moz-text-stroke: rem(1) var(--color);
