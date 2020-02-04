@@ -4,6 +4,9 @@ import { useLazyQuery } from '@apollo/react-hooks';
 import { gql } from 'apollo-boost';
 import { withRouter } from 'next/router';
 import { withLayout } from 'components/Layout/layout';
+import Text3D from 'components/Text3D/text3D';
+import Button from 'components/Button/button';
+import Markdown from 'components/Markdown/markdown';
 
 const GET_PROJECT = gql`
 query Project($id: ID) {
@@ -13,6 +16,9 @@ query Project($id: ID) {
     createdAt,
     content,
     siteUrl,
+    theme {
+      hex
+    },
     image {
       url
     }
@@ -42,8 +48,41 @@ const Project = ({ router }) => {
   }, [router]);
 
   if (loading || !data) return <p>Loading...</p>;
+
   return (
-    <h1>{data.project.title}</h1>
+    <div className="project">
+      <div className="project__hero">
+        <Text3D
+          text={data.project.title}
+          className="project__title"
+          color={data.project.theme.hex}
+        />
+        {data.project.siteUrl && (
+          <a
+            className="project__link"
+            target="_blank"
+            rel="noreferrer noopener"
+            href={data.project.siteUrl}
+          >
+            <Button>View Site</Button>
+          </a>
+        )}
+      </div>
+      <div className="grid project__content">
+        <Markdown content={data.project.content} />
+      </div>
+      <style jsx>
+        {`
+          .project__hero {
+            background-image: url('${data.project.image.url}');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-color: ${data.project.theme.hex};
+          }
+        `}
+      </style>
+    </div>
   );
 };
 
