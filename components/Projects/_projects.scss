@@ -1,0 +1,30 @@
+.projects {
+  &__link {
+    display: block;
+  }
+
+  & > &__link:not(:last-child) {
+    margin-bottom: rem(60);
+  }
+
+  &__name {
+    display: inline-block;
+    line-height: 1em;
+    font-size: rem(16);
+    font-weight: 600;
+    color: $persimmon;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    margin-bottom: rem(10);
+  }
+
+  &__img-container {
+    border: rem(3) solid transparent;
+
+    @include aspect-ratio(1, 1);
+  }
+
+  &__img {
+    width: 100%;
+  }
+}

@@ -1,0 +1,12 @@
+.posts {
+  grid-column: 2 / -2;
+
+  &__link {
+    display: block;
+    text-decoration: none;
+  }
+
+  & > &__link:not(:last-child) {
+    margin-bottom: rem(30);
+  }
+}
