@@ -50,4 +50,8 @@
   .grid > &-content {
     grid-column: 2 / -2;
   }
+
+  &__show-more {
+    margin-top: rem(40);
+  }
 }

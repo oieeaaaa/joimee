@@ -128,17 +128,17 @@ const Works = () => {
   const renderShowMore = () => {
     let count;
     if (mode === 'project') {
-      count = postsData.total.aggregate.count;
+      count = projectsData.total.aggregate.count;
     } else {
       count = postsData.total.aggregate.count;
     }
 
-    if (count <= itemsToDisplay) {
+    if (count <= itemsToDisplay || limit > itemsToDisplay) {
       return '';
     }
 
     return (
-      <Button onClick={handleShowMore}>
+      <Button className="works__show-more" onClick={handleShowMore}>
         Show more&nbsp;
         {mode}
       </Button>
