@@ -3,8 +3,10 @@
   grid-template-columns: set-width(7, 8) 1fr;
 
   &__img-container {
-    @include aspect-ratio(263, 243);
+    border: rem(3) solid transparent;
     background: $mercury;
+
+    @include aspect-ratio(263, 243);
   }
 
   &__img {
