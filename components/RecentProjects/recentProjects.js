@@ -17,7 +17,6 @@ query {
     image {
       url
     },
-    slug
   }
 }
 `;
