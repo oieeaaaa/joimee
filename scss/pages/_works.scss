@@ -1,0 +1,53 @@
+.works {
+  &-hero {
+    display: grid;
+    grid-template-columns: 35% 23.3333333333% 35%;
+    background: url('/images/works.svg');
+    background-repeat: no-repeat;
+    background-position: center right;
+    height: rem(165);
+    margin-bottom: rem(20);
+
+    @include center-content;
+  }
+
+  .grid > &-hero {
+    grid-column: 2 / -2;
+  }
+
+  &-hero__btn {
+    box-shadow: 0 0 0 rem(1) $white;
+  }
+
+  &__divider {
+    display: flex;
+    flex-direction: column;
+
+    @include center-content;
+  }
+
+  &__divider::before,
+  &__divider::after {
+    content: '';
+    display: block;
+    height: rem(30);
+    width: rem(1);
+    background-image: url('/icons/dashed.svg');
+  }
+
+  &__divider::before {
+    margin-bottom: rem(10);
+  }
+
+  &__divider::after {
+    margin-top: rem(10);
+  }
+
+  &__divider-icon {
+    transform: rotate(90deg);
+  }
+
+  .grid > &-content {
+    grid-column: 2 / -2;
+  }
+}
