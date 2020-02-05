@@ -35,7 +35,10 @@
 @import 'components/TextArea/textarea';
 @import 'components/PostCommentList/post-comment-list';
 @import 'components/Markdown/markdown';
+@import 'components/Projects/projects';
+@import 'components/Posts/posts';
 
 // pages
 @import './pages/post';
 @import './pages/project';
+@import './pages/works';
