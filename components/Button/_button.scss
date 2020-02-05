@@ -7,4 +7,10 @@
   border: none;
   color: $white;
   background-color: $persimmon;
+
+  &--white {
+    background-color: $white;
+    color: $persimmon;
+    box-shadow: 0 0 0 rem(1) $persimmon;
+  }
 }
