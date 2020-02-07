@@ -1,0 +1,56 @@
+.about {
+  &__title {
+    font-size: rem(16);
+    font-weight: 600;
+    line-height: 1.43;
+    letter-spacing: rem(3.2);
+    color: $mine-shaft;
+    text-transform: uppercase;
+  }
+
+  &__title--em {
+    color: $persimmon;
+  }
+
+  .grid > &__title {
+    grid-column: 2 / 5;
+    margin-top: rem(60);
+    margin-bottom: rem(30);
+  }
+
+  .grid > &__content {
+    grid-column: 2 / 8;
+  }
+
+  &__text {
+    font-family: $agp;
+    line-height: 1.43;
+    letter-spacing: rem(.48);
+    color: $mine-shaft;
+  }
+
+  &__content > &__text:not(:last-child) {
+    margin-bottom: rem(30);
+  }
+
+  &__gallery {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(rem(80), 1fr));
+    grid-auto-rows: minmax(rem(80), 1fr);
+    grid-auto-flow: dense;
+    grid-gap: rem(3);
+    margin-top: rem(90);
+  }
+
+  &__gallery-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    min-height: rem(80);
+  }
+
+  &__gallery-image--portrait {
+    grid-row-end: span 3;
+    grid-columnd-end: span 2;
+  }
+}
