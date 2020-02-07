@@ -1,6 +1,7 @@
 # Code Optimization
 - Use hooks for graphql
 - Lazy load comment section
+- Use hooks for infinite scroll handler
 
 # Features
 - Add loading components
