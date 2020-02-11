@@ -2,6 +2,7 @@
 @import './base/theme';
 @import './base/fonts';
 @import './base/reset';
+@import './base/animations';
 
 // utils
 @import './utils/rem';
@@ -37,6 +38,7 @@
 @import 'components/Markdown/markdown';
 @import 'components/Projects/projects';
 @import 'components/Posts/posts';
+@import 'components/Loading/loading';
 
 // pages
 @import './pages/post';
