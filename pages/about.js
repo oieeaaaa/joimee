@@ -3,6 +3,7 @@ import { gql } from 'apollo-boost';
 import { useLazyQuery } from '@apollo/react-hooks';
 import { withLayout } from 'components/Layout/layout';
 import throttle from 'lodash.throttle';
+import Loading from 'components/Loading/loading';
 
 const GET_GALLERIES = gql`
 query Galleries($last: Int) {
@@ -94,7 +95,8 @@ const About = () => {
     );
   };
 
-  if (loading || !data) return <p>Loading...</p>;
+  if (loading || !data) return <Loading />;
+
   return (
     <div className="about">
       <div className="grid">

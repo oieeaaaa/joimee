@@ -7,6 +7,7 @@ import { withLayout } from 'components/Layout/layout';
 import Text3D from 'components/Text3D/text3D';
 import Button from 'components/Button/button';
 import Markdown from 'components/Markdown/markdown';
+import Loading from 'components/Loading/loading';
 
 const GET_PROJECT = gql`
 query Project($id: ID) {
@@ -47,7 +48,7 @@ const Project = ({ router }) => {
     });
   }, [router]);
 
-  if (loading || !data) return <p>Loading...</p>;
+  if (loading || !data) return <Loading />;
 
   return (
     <div className="project">

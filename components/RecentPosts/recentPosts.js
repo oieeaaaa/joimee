@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { gql } from 'apollo-boost';
 import { useQuery } from '@apollo/react-hooks';
 import PostCard from 'components/PostCard/postCard';
+import Loading from 'components/Loading/loading';
 
 const GET_RECENT_POSTS = gql`
   query {
@@ -20,7 +21,7 @@ const GET_RECENT_POSTS = gql`
 const RecentPosts = () => {
   const { loading, error, data } = useQuery(GET_RECENT_POSTS);
 
-  if (loading) return <div>Loading...</div>;
+  if (loading) return <Loading />;
   if (error) return <div>Error!!!</div>;
   return (
     <section className="recent-posts">

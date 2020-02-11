@@ -9,6 +9,7 @@ import { withLayout } from 'components/Layout/layout';
 import XDivider from 'components/XDivider/xdivider';
 import PostComment from 'components/PostComment/postComment';
 import PostCommentList from 'components/PostCommentList/postCommentList';
+import Loading from 'components/Loading/loading';
 
 const GET_POST = gql`
   query Post($id: ID) {
@@ -108,7 +109,8 @@ const Post = ({ router }) => {
     });
   }
 
-  if (loading || !data) return <div>Loading...</div>;
+  if (loading || !data) return <Loading />;
+
   return (
     <div className="post">
       <Head>

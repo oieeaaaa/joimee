@@ -6,6 +6,7 @@ import { withLayout } from 'components/Layout/layout';
 import Button from 'components/Button/button';
 import Projects from 'components/Projects/projects';
 import Posts from 'components/Posts/posts';
+import Loading from 'components/Loading/loading';
 
 const GET_POSTS = gql`
 query Posts($last: Int) {
@@ -150,8 +151,8 @@ const Works = () => {
     addMoreItems();
   };
 
-  if (loadingPosts || !postsData) return <div>Loading posts...</div>;
-  if (loadingProjects || !projectsData) return <div>Loading projects...</div>;
+  if (!postsData || !projectsData) return <Loading />;
+
   return (
     <div className="works">
       <div className="grid">

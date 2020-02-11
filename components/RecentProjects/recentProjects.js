@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { gql } from 'apollo-boost';
 import { useQuery } from '@apollo/react-hooks';
 import Card from 'components/Card/card';
+import Loading from 'components/Loading/loading';
 
 const GET_RECENT_PROJECTS = gql`
 query {
@@ -24,8 +25,9 @@ query {
 const RecentProjects = () => {
   const { loading, error, data } = useQuery(GET_RECENT_PROJECTS);
 
-  if (loading) return <div>Loading...</div>;
+  if (loading) return <Loading />;
   if (error) return <div>Error!!!</div>;
+
   return (
     <section className="recent-projects">
       <div className="grid">
