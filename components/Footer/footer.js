@@ -65,11 +65,11 @@ const Footer = ({ router }) => {
             { rel: 'noopener noreferrer', target: '_blank' },
           )}
         </div>
-        <div className="footer-bottom">
-          <p className="footer-bottom__text">
-            {`bok © ${year}; All rights reserved.`}
-          </p>
-        </div>
+      </div>
+      <div className="footer-bottom">
+        <p className="footer-bottom__text">
+          {`bok © ${year}; All rights reserved.`}
+        </p>
       </div>
     </footer>
   );
