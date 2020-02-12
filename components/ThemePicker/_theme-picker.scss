@@ -1,0 +1,17 @@
+.theme-picker {
+  position: fixed;
+  bottom: rem(10);
+  right: rem(10);
+  z-index: 9000;
+
+  & > div {
+    display: flex;
+
+    @include center-content;
+  }
+
+  svg {
+    width: rem(30);
+    height: rem(30);
+  }
+}
