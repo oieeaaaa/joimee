@@ -2,7 +2,8 @@
   width: 100%;
   min-height: rem(100);
   padding: rem(13) rem(14);
-  color: $mine-shaft;
+  color: var(--form-text);
+  background-color: var(--form-bg);
   font-family: $me;
   font-size: rem(16);
   font-weight: 600;

@@ -11,14 +11,14 @@
   }
 
   &__content {
-    color: $mine-shaft;
+    color: var(--long-text);
     margin-bottom: rem(10);
   }
 
   &__name {
     display: flex;
     align-items: center;
-    color: $gray;
+    color: var(--text);
     text-transform: lowercase;
     align-self: flex-end;
   }
@@ -29,7 +29,7 @@
     height: rem(1);
     width: ((30 / 375) * 100vw);
     margin-right: rem(10);
-    background-color: $gray;
+    background-color: var(--text);
   }
 
   &__content,

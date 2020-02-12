@@ -5,11 +5,11 @@
   font-weight: 600;
   letter-spacing: rem(.48);
   border: none;
-  color: $white;
+  color: var(--button);
   background-color: $persimmon;
 
-  &--white {
-    background-color: $white;
+  &--active {
+    background-color: var(--button);
     color: $persimmon;
     box-shadow: 0 0 0 rem(1) $persimmon;
   }

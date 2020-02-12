@@ -4,7 +4,7 @@
     font-weight: 600;
     line-height: 1.43;
     letter-spacing: rem(3.2);
-    color: $mine-shaft;
+    color: var(--long-text);
     text-transform: uppercase;
   }
 
@@ -26,7 +26,7 @@
     font-family: $agp;
     line-height: 1.43;
     letter-spacing: rem(.48);
-    color: $mine-shaft;
+    color: var(--long-text);
   }
 
   &__content > &__text:not(:last-child) {

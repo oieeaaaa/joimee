@@ -21,7 +21,7 @@
     font-size: rem(24);
     letter-spacing: rem(.54);
     text-transform: uppercase;
-    color: $mine-shaft;
+    color: var(--fancy-text);
   }
 
   .grid > &__title {

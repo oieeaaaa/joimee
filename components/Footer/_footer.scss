@@ -1,5 +1,5 @@
 .footer {
-  background-color: $mercury;
+  background-color: var(--footer-bg);
   margin-top: rem(90);
 
   &__title {
@@ -67,7 +67,7 @@
     @include center-content;
   }
 
-  .grid > &-bottom {
+  & > &-bottom {
     grid-column: 1 / -1;
     margin-top: rem(70);
   }
@@ -75,7 +75,7 @@
   &-bottom__text {
     font-size: rem(12);
     font-weight: 600;
-    color: $white;
+    color: var(--footer-text);
     text-transform: uppercase;
     letter-spacing: rem(.36);
   }

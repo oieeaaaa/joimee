@@ -1,9 +1,61 @@
-$white: #fff;
-$black: #000;
-
+// palette
 $persimmon: #ff5555;
+
+// dark
+$black: #000;
+$coal: #222222;
 $mine-shaft: #333333;
+
+// gray
 $gray: #838383;
+$cod-gray: #1E1E1E;
+$silver: #c4c4c4;
+
+// light
+$white: #fff;
 $wild-sand: #F5F5F5;
 $mercury: #E5E5E5;
-$silver: #c4c4c4;
+
+:root {
+  // default theme
+  // -------- GLOBALS
+  --bg: #{$wild-sand};
+  --text: #{$gray};
+  --long-text: #{$mine-shaft};
+  --fancy-text: #{$mine-shaft};
+
+  // -------- FORMS
+  --form-bg: #{$white};
+  --form-placeholder: #{$gray};
+  --form-text: #{$mine-shaft};
+
+  // -------- BUTTONS
+  --button: #{$white};
+
+  // -------- LAYOUTS
+  --header-bg: #{$white};
+  --footer-bg: #{$mercury};
+  --footer-text: #{$white};
+}
+
+// dark theme
+body.dark {
+  // -------- GLOBALS
+  --bg: #{$coal};
+  --text: #{$gray};
+  --long-text: #{$mercury};
+  --fancy-text: #{$mercury};
+
+  // -------- FORMS
+  --form-bg: #{$black};
+  --form-placeholder: #{$gray};
+  --form-text: #{$mercury};
+
+  // -------- BUTTONS
+  --button: #{$black};
+
+  // -------- LAYOUTS
+  --header-bg: #{$black};
+  --footer-bg: #{$cod-gray};
+  --footer-text: #{$black};
+}

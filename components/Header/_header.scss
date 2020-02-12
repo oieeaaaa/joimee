@@ -9,7 +9,7 @@
   will-change: transform;
 
   &.scrolled {
-    background-color: $white;
+    background-color: var(--header-bg);
     box-shadow: $shadow-0;
   }
 

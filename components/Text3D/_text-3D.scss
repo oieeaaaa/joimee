@@ -1,5 +1,5 @@
 .text-3D {
-  --color: #{$mine-shaft}; // without expression the value would be literal
+  --color: var(--fancy-text); // without expression the value would be literal
 
   position: relative;
   font-size: (76 / 375) * 100vw; // responsive size

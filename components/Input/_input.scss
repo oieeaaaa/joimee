@@ -5,8 +5,8 @@
   letter-spacing: rem(.48);
   padding: rem(13) rem(14);
   border: none;
-  color: $mine-shaft;
-  background-color: $white;
+  color: var(--form-text);
+  background-color: var(--form-bg);
   box-shadow: 0 0 0 rem(1) $silver;
 
   &::placeholder {

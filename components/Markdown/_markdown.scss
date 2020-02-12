@@ -1,9 +1,11 @@
 .md {
+  color: var(--long-text);
+
   &__p {
     font-family: $agp;
     line-height: 1.63;
     letter-spacing: rem(.48);
-    color: $mine-shaft;
+    color: var(--long-text);
   }
 
   & > &__p:not(:last-child) {
@@ -14,7 +16,7 @@
     font-family: $me;
     line-height: 1.63;
     letter-spacing: rem(.48);
-    color: $mine-shaft;
+    color: var(--fancy-text);
     font-weight: 600;
     text-transform: uppercase;
   }
