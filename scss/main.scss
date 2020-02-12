@@ -33,12 +33,14 @@
 @import 'components/Footer/footer';
 @import 'components/XDivider/xdivider';
 @import 'components/PostComment/post-comment';
+@import 'components/Label/label';
 @import 'components/TextArea/textarea';
 @import 'components/PostCommentList/post-comment-list';
 @import 'components/Markdown/markdown';
 @import 'components/Projects/projects';
 @import 'components/Posts/posts';
 @import 'components/Loading/loading';
+@import 'components/ThemePicker/theme-picker';
 
 // pages
 @import './pages/post';
