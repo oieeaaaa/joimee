@@ -4,16 +4,24 @@
   box-sizing: border-box;
 }
 
+::selection {
+  background-color: $persimmon;
+}
+
 html {
   font-size: #{$font-root-size}px; /* stylelint-disable */
 }
 
 body {
   font-family: $me;
-  background-color: $wild-sand;
+  background-color: var(--bg);
+  color: var(--text);
   font-weight: 400;
   font-size: 1.6rem;
   line-height: 1.7;
+  transition-property: color, background-color;
+  transition-timing-function: ease;
+  transition-duration: .15s;
 }
 
 body.hide {
