@@ -158,7 +158,7 @@ const Works = () => {
       <div className="grid">
         <div className="works-hero">
           <Button
-            className={mode !== 'project' ? 'button--white' : 'works-hero__btn'}
+            className={mode !== 'project' ? 'button--active' : 'works-hero__btn'}
             onClick={() => setMode('project')}
           >
             Projects
@@ -171,7 +171,7 @@ const Works = () => {
             />
           </div>
           <Button
-            className={mode !== 'post' ? 'button--white' : 'works-hero__btn'}
+            className={mode !== 'post' ? 'button--active' : 'works-hero__btn'}
             onClick={() => setMode('post')}
           >
             Posts

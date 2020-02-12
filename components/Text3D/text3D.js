@@ -18,7 +18,7 @@ const Text3D = ({ className, text, color }) => (
 
 Text3D.defaultProps = {
   className: '',
-  color: '#333',
+  color: 'var(--fancy-text)',
 };
 
 Text3D.propTypes = {
