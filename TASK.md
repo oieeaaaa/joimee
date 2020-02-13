@@ -1,13 +1,12 @@
 # Code Optimization
 - Use hooks for graphql
-- Lazy load comment section
 - Use hooks for infinite scroll handler
 
 # Features
-- Add loading components
-- Create a server to handle contentful rest api conversion to graphql
++ Add loading components
 - Setup PWA
-- Add Theming
+- Create add more comments in comment section
++ Add Theming
 - Loading Effect when submitting a comment
 
 # Bug Fix
