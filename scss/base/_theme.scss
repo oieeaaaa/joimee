@@ -9,6 +9,7 @@ $mine-shaft: #333333;
 // gray
 $gray: #838383;
 $cod-gray: #1E1E1E;
+$cod-gray-darker: #121212;
 $silver: #c4c4c4;
 
 // light
@@ -36,6 +37,9 @@ $mercury: #E5E5E5;
   --header-bg: #{$white};
   --footer-bg: #{$mercury};
   --footer-text: #{$white};
+
+  // -------- IMAGES
+  --img-lazy-bg: #{$mercury};
 }
 
 // dark theme
@@ -58,4 +62,7 @@ body.dark {
   --header-bg: #{$black};
   --footer-bg: #{$cod-gray};
   --footer-text: #{$black};
+
+  // -------- IMAGES
+  --img-lazy-bg: #{$cod-gray-darker};
 }
