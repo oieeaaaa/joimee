@@ -2,6 +2,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import ReactMarkdown from 'react-markdown';
+import ImgLazy from 'components/ImgLazy/imgLazy';
 
 const Markdown = ({ content }) => {
   const renderers = {
@@ -11,7 +12,7 @@ const Markdown = ({ content }) => {
       const headingClassName = `md__heading md__heading--${level}`;
       return <CustomHeading className={headingClassName}>{children}</CustomHeading>;
     },
-    image: ({ alt, src }) => <img className="md__img" alt={alt} src={src} />,
+    image: ({ alt, src }) => <ImgLazy className="md__img" alt={alt} src={src} />,
   };
 
   return (

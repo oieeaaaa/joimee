@@ -4,6 +4,7 @@ import { useLazyQuery } from '@apollo/react-hooks';
 import { withLayout } from 'components/Layout/layout';
 import throttle from 'lodash.throttle';
 import Loading from 'components/Loading/loading';
+import ImgLazy from 'components/ImgLazy/imgLazy';
 
 const GET_GALLERIES = gql`
 query Galleries($last: Int) {
@@ -76,7 +77,7 @@ const About = () => {
       }
 
       return (
-        <img
+        <ImgLazy
           key={id}
           className={imageClass}
           src={image.url}
