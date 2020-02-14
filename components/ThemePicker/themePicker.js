@@ -6,7 +6,7 @@ const ThemePicker = () => {
   const [isPositionedLeft, setIsPositionedLeft] = useState(false);
 
   useEffect(() => {
-    window.addEventListener('click', handleTouch);
+    window.ontouchstart = handleTouch;
   }, []);
 
   useEffect(() => {
@@ -20,9 +20,10 @@ const ThemePicker = () => {
   }, [isDark]);
 
   function handleTouch(e) {
-    const halfOfSceenWidth = e.view.innerWidth / 2;
+    const halfOfSceenWidth = window.innerWidth / 2;
+    const { clientX } = e.touches.item(0);
 
-    if (e.clientX <= halfOfSceenWidth) {
+    if (clientX <= halfOfSceenWidth) {
       setIsPositionedLeft(true);
     } else {
       setIsPositionedLeft(false);
