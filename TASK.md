@@ -10,4 +10,4 @@
 - Loading Effect when submitting a comment
 
 # Bug Fix
-- Fix header not working on safari ios 12 device
++ Fix header not working on safari ios 12 device
