@@ -3,10 +3,31 @@ import { ReactSVG } from 'react-svg';
 
 const ThemePicker = () => {
   const [isDark, setIsDark] = useState(false);
+  const [isPositionedLeft, setIsPositionedLeft] = useState(false);
 
   useEffect(() => {
-    document.body.classList.toggle('dark');
+    window.addEventListener('click', handleTouch);
+  }, []);
+
+  useEffect(() => {
+    const app = document.body;
+
+    if (!isDark && app) {
+      app.classList.remove('dark');
+    } else {
+      app.classList.add('dark');
+    }
   }, [isDark]);
+
+  function handleTouch(e) {
+    const halfOfSceenWidth = e.view.innerWidth / 2;
+
+    if (e.clientX <= halfOfSceenWidth) {
+      setIsPositionedLeft(true);
+    } else {
+      setIsPositionedLeft(false);
+    }
+  }
 
   const toggleDark = e => {
     e.preventDefault();
@@ -15,10 +36,10 @@ const ThemePicker = () => {
 
   return (
     <ReactSVG
-      className="theme-picker"
+      className={isPositionedLeft ? 'theme-picker left' : 'theme-picker'}
       wrapper="div"
       onClick={toggleDark}
-      src={`/icons/${isDark ? 'moon' : 'sun'}.svg`}
+      src={`/icons/${!isDark ? 'moon' : 'sun'}.svg`}
     />
   );
 };

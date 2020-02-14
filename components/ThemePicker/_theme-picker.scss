@@ -1,8 +1,13 @@
 .theme-picker {
   position: fixed;
-  bottom: rem(10);
-  right: rem(10);
+  bottom: rem(50);
+  right: rem(20);
   z-index: 9000;
+
+  &.left {
+    left: rem(20);
+    right: unset;
+  }
 
   & > div {
     display: flex;
@@ -11,7 +16,7 @@
   }
 
   svg {
-    width: rem(30);
-    height: rem(30);
+    width: rem(40);
+    height: rem(40);
   }
 }
