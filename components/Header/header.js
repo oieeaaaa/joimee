@@ -14,15 +14,18 @@ const Header = ({ router, scrollOffset }) => {
     let prevScroll = 0;
 
     const handleScroll = throttle(() => {
+      const { scrollY } = window;
+
+      if (scrollY < 0) return;
       // with offset check if scrolled
-      if (window.scrollY > scrollOffset) {
+      if (scrollY > scrollOffset) {
         h.classList.add('scrolled');
       } else {
         h.classList.remove('scrolled');
       }
 
       // check scroll direction
-      if (prevScroll < window.scrollY) {
+      if (prevScroll < scrollY) {
         h.classList.add('hidden');
       } else {
         h.classList.remove('hidden');
