@@ -1,43 +1,30 @@
-import React, { useEffect, useRef } from 'react';
-import throttle from 'lodash.throttle';
+import React, { useRef } from 'react';
 import PropTypes from 'prop-types';
 import { withRouter } from 'next/router';
 import Link from 'next/link';
+import useScroll from 'js/hooks/useScroll';
 import navList from './navList';
 
 const Header = ({ router, scrollOffset }) => {
   const header = useRef(null);
+  const [] = useScroll(handleScroll, scrollOffset); // eslint-disable-line
 
-  useEffect(() => {
-    if (!header) return false;
+  function handleScroll({ bottom, scrolled }) {
     const { current: h } = header;
-    let prevScroll = 0;
+    if (!h) return;
+    if (scrolled) {
+      h.classList.add('scrolled');
+    } else {
+      h.classList.remove('scrolled');
+    }
 
-    const handleScroll = throttle(() => {
-      const { scrollY } = window;
-
-      if (scrollY < 0) return;
-      // with offset check if scrolled
-      if (scrollY > scrollOffset) {
-        h.classList.add('scrolled');
-      } else {
-        h.classList.remove('scrolled');
-      }
-
-      // check scroll direction
-      if (prevScroll < scrollY) {
-        h.classList.add('hidden');
-      } else {
-        h.classList.remove('hidden');
-      }
-
-      prevScroll = window.scrollY;
-    }, 500);
-
-    window.addEventListener('scroll', handleScroll);
-
-    return () => window.removeEventListener('scroll', handleScroll); // cleanup
-  }, [header]);
+    // check scroll direction
+    if (bottom) {
+      h.classList.add('hidden');
+    } else {
+      h.classList.remove('hidden');
+    }
+  }
 
   function renderLinks(links) {
     const [, currentRoute] = router.pathname.split('/'); // get the base path

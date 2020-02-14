@@ -1,9 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import { ReactSVG } from 'react-svg';
+import useScroll from 'js/hooks/useScroll';
 
 const ThemePicker = () => {
+  const themePicker = useRef(null);
   const [isDark, setIsDark] = useState(false);
-  const [isPositionedLeft, setIsPositionedLeft] = useState(false);
+  const [] = useScroll(handleScroll, ); // eslint-disable-line
 
   useEffect(() => {
     window.ontouchstart = handleTouch;
@@ -20,13 +22,26 @@ const ThemePicker = () => {
   }, [isDark]);
 
   function handleTouch(e) {
+    if (!themePicker.current) return;
+    const { container } = themePicker.current;
     const halfOfSceenWidth = window.innerWidth / 2;
     const { clientX } = e.touches.item(0);
 
     if (clientX <= halfOfSceenWidth) {
-      setIsPositionedLeft(true);
+      container.classList.add('left');
     } else {
-      setIsPositionedLeft(false);
+      container.classList.remove('left');
+    }
+  }
+
+  function handleScroll({ bottom }) {
+    if (!themePicker.current) return;
+    const { container } = themePicker.current;
+
+    if (bottom) {
+      container.classList.add('hide');
+    } else {
+      container.classList.remove('hide');
     }
   }
 
@@ -35,9 +50,11 @@ const ThemePicker = () => {
     setIsDark(!isDark);
   };
 
+
   return (
     <ReactSVG
-      className={isPositionedLeft ? 'theme-picker left' : 'theme-picker'}
+      className="theme-picker"
+      ref={themePicker}
       wrapper="div"
       onClick={toggleDark}
       src={`/icons/${!isDark ? 'moon' : 'sun'}.svg`}
