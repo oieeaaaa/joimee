@@ -1,11 +1,12 @@
 .header {
   position: sticky;
+  position: -webkit-sticky;
   top: 0;
   left: 0;
   transition-property: transform, box-shadow, background-color;
   transition-duration: .25s;
   transition-timing-function: ease;
-  z-index: 100;
+  z-index: 9001;
   will-change: transform;
 
   &.scrolled {
