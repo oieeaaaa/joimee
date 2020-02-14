@@ -8,12 +8,18 @@
   width: rem(40);
   height: rem(40);
   border-radius: 50%;
+  opacity: 1;
+  transition: opacity .15s ease;
 
   @include center-content;
 
   &.left {
     left: rem(20);
     right: unset;
+  }
+
+  &.hide {
+    opacity: 0;
   }
 
   & > div {
