@@ -1,8 +1,15 @@
 .theme-picker {
   position: fixed;
+  display: flex;
   bottom: rem(50);
   right: rem(20);
   z-index: 9000;
+  background-color: rgba($persimmon, .7);
+  width: rem(40);
+  height: rem(40);
+  border-radius: 50%;
+
+  @include center-content;
 
   &.left {
     left: rem(20);
@@ -16,7 +23,7 @@
   }
 
   svg {
-    width: rem(40);
-    height: rem(40);
+    width: rem(20);
+    height: rem(20);
   }
 }
