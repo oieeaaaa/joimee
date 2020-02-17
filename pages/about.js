@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { gql } from 'apollo-boost';
 import { useLazyQuery } from '@apollo/react-hooks';
-import { withLayout } from 'components/Layout/layout';
+import Layout from 'components/Layout/layout';
 import throttle from 'lodash.throttle';
 import Loading from 'components/Loading/loading';
 import ImgLazy from 'components/ImgLazy/imgLazy';
@@ -99,28 +99,30 @@ const About = () => {
   if (loading || !data) return <Loading />;
 
   return (
-    <div className="about">
-      <div className="grid">
-        {renderTitle()}
-        <div className="about__content">
-          <p className="about__text">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
-            sagittis justo et enim egestas gravida.
-          </p>
-          <p className="about__text">
-            Praesent commodo orci tellus, in tristique nibh fermentum sed.
-          </p>
-          <p className="about__text">
-            Etiam vel ultrices magna. Donec condimentum finibus odio eu
-            sollicitudin. Cras viverra est eget erat feugiat feugiat.
-          </p>
+    <Layout title="About">
+      <div className="about">
+        <div className="grid">
+          {renderTitle()}
+          <div className="about__content">
+            <p className="about__text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
+              sagittis justo et enim egestas gravida.
+            </p>
+            <p className="about__text">
+              Praesent commodo orci tellus, in tristique nibh fermentum sed.
+            </p>
+            <p className="about__text">
+              Etiam vel ultrices magna. Donec condimentum finibus odio eu
+              sollicitudin. Cras viverra est eget erat feugiat feugiat.
+            </p>
+          </div>
+        </div>
+        <div className="about__gallery">
+          {renderImage(data.galleries)}
         </div>
       </div>
-      <div className="about__gallery">
-        {renderImage(data.galleries)}
-      </div>
-    </div>
+    </Layout>
   );
 };
 
-export default withLayout(About);
+export default About;
