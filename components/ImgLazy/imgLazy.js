@@ -2,11 +2,11 @@ import React, { useRef, useEffect } from 'react';
 import PropTypes from 'prop-types';
 
 const ImgLazy = ({ src, className, alt }) => {
-  const figure = useRef(null);
+  const container = useRef(null);
 
   useEffect(() => {
-    if (!figure.current) return;
-    const figureEl = figure.current;
+    if (!container.current) return;
+    const containerEl = container.current;
     const imgEl = new Image();
 
     imgEl.src = src;
@@ -14,14 +14,14 @@ const ImgLazy = ({ src, className, alt }) => {
     imgEl.className = 'img-lazy__content';
 
     imgEl.onload = () => {
-      figureEl.classList.add('loaded');
-      figureEl.insertAdjacentElement('beforeend', imgEl);
+      containerEl.classList.add('loaded');
+      containerEl.insertAdjacentElement('beforeend', imgEl);
     };
-  }, [figure]);
+  }, [container]);
 
   return (
     <div
-      ref={figure}
+      ref={container}
       className={className ? `img-lazy ${className}` : 'img-lazy'}
     />
   );
