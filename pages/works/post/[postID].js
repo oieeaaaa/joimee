@@ -53,7 +53,10 @@ const ADD_POST_COMMENT = gql`
 `;
 
 const Post = ({ router }) => {
-  const [addPostComment] = useMutation(ADD_POST_COMMENT, { update: updatePostComment });
+  const [
+    addPostComment,
+    { loading: loadingPostComment },
+  ] = useMutation(ADD_POST_COMMENT, { update: updatePostComment });
   const [loadPost, { loading, data }] = useLazyQuery(
     GET_POST,
     {
@@ -123,7 +126,7 @@ const Post = ({ router }) => {
             {parseDate(data.post.createdAt)}
           </p>
           <XDivider />
-          <PostComment onSubmit={onPostComment} />
+          <PostComment onSubmit={onPostComment} loading={loadingPostComment} />
           <XDivider />
           <PostCommentList comments={data.post.comments} />
         </div>

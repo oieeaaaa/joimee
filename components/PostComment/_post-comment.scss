@@ -26,4 +26,11 @@
     width: set-width(4, 8);
     align-self: flex-end;
   }
+
+  .button:disabled {
+    background-color: var(--disabled-bg);
+    color: var(--disabled-text);
+    transition-property: background-color, color;
+    transition-duration: .15s;
+  }
 }

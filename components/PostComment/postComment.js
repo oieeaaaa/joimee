@@ -5,7 +5,7 @@ import Button from 'components/Button/button';
 import TextArea from 'components/TextArea/textarea';
 import Label from 'components/Label/label';
 
-const PostComment = ({ onSubmit }) => {
+const PostComment = ({ onSubmit, loading }) => {
   const [name, setName] = useState('');
   const [message, setMessage] = useState('');
 
@@ -23,6 +23,8 @@ const PostComment = ({ onSubmit }) => {
     e.preventDefault();
 
     onSubmit({ name, message });
+    setName('');
+    setMessage('');
   };
 
   return (
@@ -34,13 +36,14 @@ const PostComment = ({ onSubmit }) => {
       <Label className="post-comment__message" label="Message" id="message">
         <TextArea id="message" onChange={handleMessageChange} value={message} />
       </Label>
-      <Button type="submit">Post</Button>
+      <Button disabled={loading} type="submit">Post</Button>
     </form>
   );
 };
 
 PostComment.propTypes = {
   onSubmit: PropTypes.func.isRequired,
+  loading: PropTypes.bool.isRequired,
 };
 
 export default PostComment;

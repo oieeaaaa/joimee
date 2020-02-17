@@ -40,6 +40,10 @@ $mercury: #E5E5E5;
 
   // -------- IMAGES
   --img-lazy-bg: #{$mercury};
+
+  // -------- STATES
+  --disabled-bg: #{$mercury};
+  --disabled-text: #{$silver};
 }
 
 // dark theme
@@ -65,4 +69,8 @@ body.dark {
 
   // -------- IMAGES
   --img-lazy-bg: #{$cod-gray-darker};
+
+  // -------- STATES
+  --disabled-bg: #{$cod-gray-darker};
+  --disabled-text: #{$gray};
 }
