@@ -7,8 +7,18 @@ const ThemePicker = () => {
   const [isDark, setIsDark] = useState(false);
   const [] = useScroll(handleScroll, ); // eslint-disable-line
 
+
   useEffect(() => {
+    const { matches } = window.matchMedia('(prefers-color-scheme: dark)');
     window.ontouchstart = handleTouch;
+
+    if (matches) {
+      setIsDark(true);
+    }
+
+    return () => {
+      window.ontouchstart = null;
+    };
   }, []);
 
   useEffect(() => {
