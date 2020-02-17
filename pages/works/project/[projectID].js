@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { useLazyQuery } from '@apollo/react-hooks';
 import { gql } from 'apollo-boost';
 import { withRouter } from 'next/router';
-import { withLayout } from 'components/Layout/layout';
+import Layout from 'components/Layout/layout';
 import Text3D from 'components/Text3D/text3D';
 import Button from 'components/Button/button';
 import Markdown from 'components/Markdown/markdown';
@@ -51,39 +51,41 @@ const Project = ({ router }) => {
   if (loading || !data) return <Loading />;
 
   return (
-    <div className="project">
-      <div className="project__hero">
-        <Text3D
-          text={data.project.title}
-          className="project__title"
-          color={data.project.theme.hex}
-        />
-        {data.project.siteUrl && (
-          <a
-            className="project__link"
-            target="_blank"
-            rel="noreferrer noopener"
-            href={data.project.siteUrl}
-          >
-            <Button>View Site</Button>
-          </a>
-        )}
+    <Layout title={data.project.title}>
+      <div className="project">
+        <div className="project__hero">
+          <Text3D
+            text={data.project.title}
+            className="project__title"
+            color={data.project.theme.hex}
+          />
+          {data.project.siteUrl && (
+            <a
+              className="project__link"
+              target="_blank"
+              rel="noreferrer noopener"
+              href={data.project.siteUrl}
+            >
+              <Button>View Site</Button>
+            </a>
+          )}
+        </div>
+        <div className="grid project__content">
+          <Markdown content={data.project.content} />
+        </div>
+        <style jsx>
+          {`
+            .project__hero {
+              background-image: url('${data.project.image.url}');
+              background-size: cover;
+              background-position: center;
+              background-attachment: fixed;
+              background-color: ${data.project.theme.hex};
+            }
+          `}
+        </style>
       </div>
-      <div className="grid project__content">
-        <Markdown content={data.project.content} />
-      </div>
-      <style jsx>
-        {`
-          .project__hero {
-            background-image: url('${data.project.image.url}');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-            background-color: ${data.project.theme.hex};
-          }
-        `}
-      </style>
-    </div>
+    </Layout>
   );
 };
 
@@ -96,4 +98,4 @@ Project.propTypes = {
   }).isRequired,
 };
 
-export default withLayout(withRouter(Project));
+export default withRouter(Project);

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import throttle from 'lodash.throttle';
 import { gql } from 'apollo-boost';
 import { useLazyQuery } from '@apollo/react-hooks';
-import { withLayout } from 'components/Layout/layout';
+import Layout from 'components/Layout/layout';
 import Button from 'components/Button/button';
 import Projects from 'components/Projects/projects';
 import Posts from 'components/Posts/posts';
@@ -154,36 +154,38 @@ const Works = () => {
   if (!postsData || !projectsData) return <Loading />;
 
   return (
-    <div className="works">
-      <div className="grid">
-        <div className="works-hero">
-          <Button
-            className={mode !== 'project' ? 'button--active' : 'works-hero__btn'}
-            onClick={() => setMode('project')}
-          >
-            Projects
-          </Button>
-          <div className="works__divider">
-            <img
-              className="works__divider-icon"
-              src="/icons/arrow-down.svg"
-              alt="arrow-down.svg"
-            />
+    <Layout title="Works">
+      <div className="works">
+        <div className="grid">
+          <div className="works-hero">
+            <Button
+              className={mode !== 'project' ? 'button--active' : 'works-hero__btn'}
+              onClick={() => setMode('project')}
+            >
+              Projects
+            </Button>
+            <div className="works__divider">
+              <img
+                className="works__divider-icon"
+                src="/icons/arrow-down.svg"
+                alt="arrow-down.svg"
+              />
+            </div>
+            <Button
+              className={mode !== 'post' ? 'button--active' : 'works-hero__btn'}
+              onClick={() => setMode('post')}
+            >
+              Posts
+            </Button>
           </div>
-          <Button
-            className={mode !== 'post' ? 'button--active' : 'works-hero__btn'}
-            onClick={() => setMode('post')}
-          >
-            Posts
-          </Button>
-        </div>
-        <div className="works-content">
-          {mode !== 'project' ? <Posts data={postsData.posts} /> : <Projects data={projectsData.projects} />}
-          {renderShowMore()}
+          <div className="works-content">
+            {mode !== 'project' ? <Posts data={postsData.posts} /> : <Projects data={projectsData.projects} />}
+            {renderShowMore()}
+          </div>
         </div>
       </div>
-    </div>
+    </Layout>
   );
 };
 
-export default withLayout(Works);
+export default Works;

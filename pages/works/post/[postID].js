@@ -1,11 +1,10 @@
 import React, { useEffect } from 'react';
-import Head from 'next/head';
 import PropTypes from 'prop-types';
 import { withRouter } from 'next/router';
 import { useLazyQuery, useMutation } from '@apollo/react-hooks';
 import { gql } from 'apollo-boost';
 import Markdown from 'components/Markdown/markdown';
-import { withLayout } from 'components/Layout/layout';
+import Layout from 'components/Layout/layout';
 import XDivider from 'components/XDivider/xdivider';
 import PostComment from 'components/PostComment/postComment';
 import PostCommentList from 'components/PostCommentList/postCommentList';
@@ -108,29 +107,28 @@ const Post = ({ router }) => {
   if (loading || !data) return <Loading />;
 
   return (
-    <div className="post">
-      <Head>
-        <title>{data.post.title}</title>
-      </Head>
-      <div className="grid">
-        <figure className="post__image-container">
-          <img
-            className="post__image"
-            src={data.post.image.url}
-            alt={data.post.title}
-          />
-        </figure>
-        <h1 className="post__title">{data.post.title}</h1>
-        <Markdown content={data.post.content} />
-        <p className="post__date">
-          {parseDate(data.post.createdAt)}
-        </p>
-        <XDivider />
-        <PostComment onSubmit={onPostComment} />
-        <XDivider />
-        <PostCommentList comments={data.post.comments} />
+    <Layout title={data.post.title}>
+      <div className="post">
+        <div className="grid">
+          <figure className="post__image-container">
+            <img
+              className="post__image"
+              src={data.post.image.url}
+              alt={data.post.title}
+            />
+          </figure>
+          <h1 className="post__title">{data.post.title}</h1>
+          <Markdown content={data.post.content} />
+          <p className="post__date">
+            {parseDate(data.post.createdAt)}
+          </p>
+          <XDivider />
+          <PostComment onSubmit={onPostComment} />
+          <XDivider />
+          <PostCommentList comments={data.post.comments} />
+        </div>
       </div>
-    </div>
+    </Layout>
   );
 };
 
@@ -143,4 +141,4 @@ Post.propTypes = {
   }).isRequired,
 };
 
-export default withLayout(withRouter(Post), { title: 'Post' });
+export default withRouter(Post);
