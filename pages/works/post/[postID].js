@@ -10,6 +10,7 @@ import XDivider from 'components/XDivider/xdivider';
 import PostComment from 'components/PostComment/postComment';
 import PostCommentList from 'components/PostCommentList/postCommentList';
 import Loading from 'components/Loading/loading';
+import parseDate from 'js/utils/parseDate';
 
 const GET_POST = gql`
   query Post($id: ID) {
@@ -62,11 +63,6 @@ const Post = ({ router }) => {
       },
     },
   );
-  const dateConfig = {
-    day: 'numeric',
-    month: 'long',
-    year: 'numeric',
-  };
 
   useEffect(() => {
     const id = router.query.postID;
@@ -127,7 +123,7 @@ const Post = ({ router }) => {
         <h1 className="post__title">{data.post.title}</h1>
         <Markdown content={data.post.content} />
         <p className="post__date">
-          {(new Date(data.post.createdAt)).toLocaleDateString('en-US', dateConfig)}
+          {parseDate(data.post.createdAt)}
         </p>
         <XDivider />
         <PostComment onSubmit={onPostComment} />

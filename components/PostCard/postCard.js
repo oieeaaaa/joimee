@@ -1,26 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import parseDate from 'js/utils/parseDate';
 
-const PostCard = ({ title, excerpt, date }) => {
-  // TODO: postDate.toLocaleDateString needs polyfill.
-  const postDate = new Date(date);
-  const dateConfig = {
-    day: 'numeric',
-    month: 'long',
-    year: 'numeric',
-  };
-
-  return (
-    <div className="post-card">
-      <h3 className="post-card__title" title={title}>{title}</h3>
-      <p className="post-card__excerpt">{excerpt}</p>
-      <p className="post-card__date">
-        <time dateTime={date} />
-        {postDate.toLocaleDateString('en-US', dateConfig)}
-      </p>
-    </div>
-  );
-};
+const PostCard = ({ title, excerpt, date }) => (
+  <div className="post-card">
+    <h3 className="post-card__title" title={title}>{title}</h3>
+    <p className="post-card__excerpt">{excerpt}</p>
+    <p className="post-card__date">
+      <time dateTime={date} />
+      {parseDate(date)}
+    </p>
+  </div>
+);
 
 
 PostCard.propTypes = {
