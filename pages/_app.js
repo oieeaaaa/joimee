@@ -53,11 +53,12 @@ class App extends React.Component {
           <link rel="apple-touch-startup-image" href="/images/launch-screen.png" />
 
           <meta name="apple-mobile-web-app-capable" content="yes" />
+          <meta name="theme-color" content="#ff5555" />
         </Head>
-        <div className="app">
+        <main className="app">
           <Component {...pageProps} />
           <ThemePicker />
-        </div>
+        </main>
       </ApolloProvider>
     );
   }
