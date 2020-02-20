@@ -24,6 +24,32 @@
     display: flex;
     justify-content: space-between;
     padding: rem(20) 0;
+
+    @include tablet-l {
+      .header:not(.scrolled) & {
+        justify-content: center;
+      }
+    }
+
+    @include desktop {
+      grid-column: 1 / -1;
+    }
+  }
+
+  &-nav > &-nav__link:first-child {
+    @include tablet-l {
+      .header:not(.scrolled) & {
+        display: none;
+      }
+    }
+  }
+
+  &-nav > &-nav__link:last-child {
+    @include tablet-l {
+      .header:not(.scrolled) & {
+        display: none;
+      }
+    }
   }
 
   &-nav__link {
@@ -36,21 +62,39 @@
     color: var(--header-text);
     letter-spacing: rem(.48);
 
-    @include desktop {
-      &:hover {
-        color: $persimmon;
-      }
+    @include tablet-p {
+      font-size: rem(18);
     }
   }
 
   &-nav__link.active::before {
     content: '';
     position: absolute;
+    display: inline-block;
     top: 50%;
     width: rem(10);
     height: rem(10);
-    transform: translateY(-50%) translateX(-200%); // a tiny space between text and this element
-    background: url('/icons/arrow-down.svg');
+    transform: translateY(-50%);
+    margin-left: rem(-20);
+    background: $persimmon;
+
+    @include triangle;
+
+    @include tablet-p {
+      width: rem(15);
+      height: rem(15);
+      margin-left: rem(-25);
+
+      @include diamond;
+    }
+
+    @include tablet-l {
+      @include pentagon;
+    }
+
+    @include desktop {
+      @include polygon;
+    }
   }
 
   &-nav__link--center {

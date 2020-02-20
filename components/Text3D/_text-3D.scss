@@ -2,7 +2,7 @@
   --color: var(--fancy-text); // without expression the value would be literal
 
   position: relative;
-  font-size: (76 / 375) * 100vw; // responsive size
+  font-size: calc((76 * 1px) + (166 - 76) * ((100vw - 420px) / (1200 - 420)));
   font-weight: bold;
   line-height: 1;
   text-transform: uppercase;

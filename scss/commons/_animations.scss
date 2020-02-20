@@ -1,0 +1,33 @@
+// morph into triangle to polygon
+@keyframes morph {
+  0% {
+    @include triangle;
+  }
+
+  15% {
+    @include triangle;
+  }
+
+  25% {
+    @include diamond;
+  }
+
+  50% {
+    @include pentagon;
+  }
+
+  100% {
+    @include polygon;
+  }
+}
+
+// fade in and out
+@keyframes fadeInOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: .1;
+  }
+}

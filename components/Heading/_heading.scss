@@ -9,6 +9,20 @@
   white-space: nowrap;
   color: $persimmon;
 
+  @include tablet-p {
+    font-size: rem(22);
+    letter-spacing: rem(4.4);
+  }
+
+  @include tablet-l {
+    font-size: rem(34);
+  }
+
+  @include desktop {
+    font-size: rem(44);
+    grid-column-gap: rem(20);
+  }
+
 
   &::after {
     content: '';
@@ -17,5 +31,13 @@
     width: 100%;
     height: rem(1);
     background-color: $persimmon;
+
+    @include tablet-l {
+      max-width: rem(150);
+    }
+
+    @include desktop {
+      height: rem(2);
+    }
   }
 }

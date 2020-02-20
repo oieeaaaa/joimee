@@ -1,11 +1,9 @@
 .hero {
+  padding: rem(30) 0;
   margin-top: rem(40);
 
-  &__bg {
-    grid-column: 2 / -3;
-    grid-row: 1 / 1; // makes overlapping
-    width: 250 / 262.5 * 100%;
-    height: auto;
+  @include tablet-p {
+    padding: rem(50) 0;
   }
 
   &__title {
@@ -16,5 +14,37 @@
     flex-direction: column;
     text-align: right;
     text-decoration: none;
+
+    @include tablet-l {
+      grid-column: 6 / -2;
+    }
+
+    @include desktop {
+      grid-column: 9 / -1;
+    }
+  }
+
+  &__nav {
+    display: none;
+
+    @include tablet-l {
+      grid-column: 2 / 4;
+      align-self: center;
+
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    @include desktop {
+      grid-column: 1 / 6;
+    }
+  }
+
+  &__nav-item {
+    font-size: rem(64);
+    font-family: $me;
+    color: var(--text);
+    text-transform: uppercase;
   }
 }

@@ -2,11 +2,25 @@
   display: grid;
   grid-template-columns: set-width(7, 8) 1fr;
 
+  @include tablet-p {
+    grid-template-columns: set-width(6, 10) 1fr;
+    height: rem(280);
+  }
+
+  @include tablet-l {
+    display: block;
+    height: auto;
+  }
+
   &__img-container {
     border: rem(3) solid transparent;
     background: $mercury;
 
     @include aspect-ratio(263, 243);
+
+    @include tablet-l {
+      @include aspect-ratio(402, 307);
+    }
   }
 
   &__img {
@@ -24,5 +38,19 @@
     overflow: hidden;
     text-overflow: ellipsis;
     transform: translateY(-100%) rotate(90deg);
+
+    @include tablet-p {
+      transform: unset;
+      text-align: center;
+      align-self: center;
+      justify-self: center;
+      font-size: rem(26);
+      letter-spacing: rem(.78);
+      width: min-content;
+    }
+
+    @include tablet-l {
+      margin-top: rem(10);
+    }
   }
 }

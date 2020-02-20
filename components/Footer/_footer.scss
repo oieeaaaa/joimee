@@ -2,6 +2,10 @@
   background-color: var(--footer-bg);
   margin-top: rem(90);
 
+  @include tablet-p {
+    padding-top: rem(50);
+  }
+
   &__title {
     text-decoration: none;
   }
@@ -14,6 +18,14 @@
     grid-column: 2 / -2;
     justify-self: start;
     margin: rem(30) 0;
+
+    @include tablet-p {
+      grid-column: 2 / 5;
+    }
+
+    @include desktop {
+      grid-column: 1 / 8;
+    }
   }
 
   &-list {
@@ -29,10 +41,26 @@
 
   .grid > &-list:nth-child(2) {
     grid-column: 2 / 6;
+
+    @include tablet-p {
+      grid-column: 7 / 9;
+    }
+
+    @include desktop {
+      grid-column: 12 / span 2;
+    }
   }
 
   .grid > &-list:nth-child(3) {
     grid-column: 6 / -2;
+
+    @include tablet-p {
+      grid-column: -5 / -2;
+    }
+
+    @include desktop {
+      grid-column: -7 / span 3;
+    }
   }
 
   &-list__title {
@@ -41,6 +69,14 @@
     letter-spacing: rem(.42);
     color: var(--text);
     text-transform: uppercase;
+
+    @include tablet-p {
+      font-size: rem(16);
+    }
+
+    @include tablet-l {
+      font-size: rem(24);
+    }
   }
 
   &-list > &-list__title {
@@ -53,6 +89,10 @@
     letter-spacing: rem(.42);
     color: var(--text);
     text-decoration: none;
+
+    @include tablet-p {
+      font-size: rem(16);
+    }
   }
 
   &-list > &-list__item:not(:last-child) {
@@ -70,6 +110,10 @@
   & > &-bottom {
     grid-column: 1 / -1;
     margin-top: rem(70);
+
+    @include tablet-p {
+      margin-top: rem(60);
+    }
   }
 
   &-bottom__text {
