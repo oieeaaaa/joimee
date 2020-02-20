@@ -39,7 +39,7 @@
     font-size: rem(14);
     font-weight: 600;
     letter-spacing: rem(.42);
-    color: $gray;
+    color: var(--text);
     text-transform: uppercase;
   }
 
@@ -51,7 +51,7 @@
     font-size: rem(14);
     font-weight: 400;
     letter-spacing: rem(.42);
-    color: $gray;
+    color: var(--text);
     text-decoration: none;
   }
 

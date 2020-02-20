@@ -33,7 +33,7 @@
     line-height: 1.25;
     font-family: $me;
     font-weight: 300;
-    color: $gray;
+    color: var(--header-text);
     letter-spacing: rem(.48);
 
     @include desktop {

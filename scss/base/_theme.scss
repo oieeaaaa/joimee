@@ -14,14 +14,14 @@ $silver: #c4c4c4;
 
 // light
 $white: #fff;
-$wild-sand: #F5F5F5;
+$whitesmoke: #F5F5F5;
 $mercury: #E5E5E5;
 
 @mixin light {
   // default theme
   // -------- GLOBALS
-  --bg: #{$wild-sand};
-  --text: #{$gray};
+  --bg: #{$whitesmoke};
+  --text: #{$mine-shaft};
   --long-text: #{$mine-shaft};
   --fancy-text: #{$mine-shaft};
 
@@ -35,6 +35,7 @@ $mercury: #E5E5E5;
 
   // -------- LAYOUTS
   --header-bg: #{$white};
+  --header-text: #{$mine-shaft};
   --footer-bg: #{$mercury};
   --footer-text: #{$white};
 
@@ -49,7 +50,7 @@ $mercury: #E5E5E5;
 @mixin dark {
   // -------- GLOBALS
   --bg: #{$coal};
-  --text: #{$gray};
+  --text: #{$mercury};
   --long-text: #{$mercury};
   --fancy-text: #{$mercury};
 
@@ -63,6 +64,7 @@ $mercury: #E5E5E5;
 
   // -------- LAYOUTS
   --header-bg: #{$black};
+  --header-text: #{$mercury};
   --footer-bg: #{$cod-gray};
   --footer-text: #{$black};
 
