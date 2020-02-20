@@ -7,7 +7,7 @@ const Subscribe = () => (
     <div className="grid">
       <div className="subscribe-group">
         <div className="subscribe__input with-dashes">
-          <Input placeholder="name@example.com" type="email" />
+          <Input aria-label="Email" placeholder="name@example.com" type="email" />
         </div>
         <Button className="subscribe__button with-dashes">Subscribe</Button>
       </div>
