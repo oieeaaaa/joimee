@@ -6,6 +6,10 @@
     letter-spacing: rem(3.2);
     color: var(--long-text);
     text-transform: uppercase;
+
+    @include tablet-p {
+      font-size: rem(26);
+    }
   }
 
   &__title--em {
@@ -13,9 +17,13 @@
   }
 
   .grid > &__title {
-    grid-column: 2 / 5;
+    grid-column: 2 / -2;
     margin-top: rem(60);
     margin-bottom: rem(30);
+
+    @include tablet-p {
+      margin-bottom: rem(40);
+    }
   }
 
   .grid > &__content {
@@ -27,6 +35,10 @@
     line-height: 1.43;
     letter-spacing: rem(.48);
     color: var(--long-text);
+
+    @include tablet-l {
+      font-size: rem(18);
+    }
   }
 
   &__content > &__text:not(:last-child) {
@@ -40,6 +52,18 @@
     grid-auto-flow: dense;
     grid-gap: rem(3);
     margin-top: rem(90);
+
+    @include tablet-p {
+      grid-template-columns: repeat(3, minmax(rem(80), 1fr));
+    }
+
+    @include tablet-l {
+      grid-template-columns: repeat(4, minmax(rem(80), 1fr));
+    }
+
+    @include desktop {
+      grid-template-columns: repeat(5, minmax(rem(80), 1fr));
+    }
   }
 
   &__gallery-image {
