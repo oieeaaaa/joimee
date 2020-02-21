@@ -17,7 +17,7 @@ const Hero = () => (
             Works
           </a>
         </Link>
-        <Link href="/works">
+        <Link href="/about">
           <a className="hero__nav-item">
             About
           </a>
