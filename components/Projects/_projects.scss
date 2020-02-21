@@ -1,10 +1,61 @@
 .projects {
+  @include tablet-l {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-row-gap: rem(50);
+  }
+
+  @include desktop {
+    grid-template-columns: 1fr rem(60) 1fr rem(60) 1fr;
+  }
+
   &__link {
     display: block;
+    text-decoration: none;
+
+    @include tablet-l {
+      width: 95.18072289156626%;
+    }
+
+    @include desktop {
+      width: 100%;
+      grid-column: auto / span 1;
+    }
   }
 
   & > &__link:not(:last-child) {
     margin-bottom: rem(60);
+
+    @include tablet-l {
+      margin-bottom: 0;
+    }
+  }
+
+  & > &__link:nth-child(2n) {
+    margin-left: auto;
+
+    @include desktop {
+      grid-column: 3 / span 1;
+      margin-left: unset;
+    }
+  }
+
+  & > &__link:nth-child(3n) {
+    @include desktop {
+      grid-column: -2 / -1;
+      margin-left: unset;
+    }
+  }
+
+  &__card {
+    @include tablet-p {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @include tablet-l {
+      display: block;
+    }
   }
 
   &__name {
@@ -16,12 +67,31 @@
     letter-spacing: 0.03em;
     text-transform: uppercase;
     margin-bottom: rem(10);
+
+    @include tablet-p {
+      order: 2;
+      margin: 0;
+      font-size: rem(26);
+      letter-spacing: rem(.78);
+      align-self: center;
+      justify-self: center;
+    }
+
+    @include tablet-l {
+      font-size: rem(20);
+      margin-bottom: rem(10);
+    }
   }
 
   &__img-container {
     border: rem(3) solid transparent;
 
     @include aspect-ratio(1, 1);
+
+    @include tablet-p {
+      @include aspect-ratio(384, 280);
+      order: 1;
+    }
   }
 
   &__img {

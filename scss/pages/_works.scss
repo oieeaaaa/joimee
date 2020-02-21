@@ -9,14 +9,50 @@
     margin-bottom: rem(20);
 
     @include center-content;
+
+    @include tablet-p {
+      grid-template-columns: 1fr 1fr;
+      background: none;
+      height: auto;
+      margin: rem(60) 0;
+    }
+
+    @include tablet-l {
+      margin-top: rem(60);
+      margin-bottom: rem(90);
+    }
+  }
+
+  &-hero .button--active {
+    @include tablet-p {
+      box-shadow: unset;
+    }
+  }
+
+  &-hero > .button {
+    @include tablet-l {
+      height: rem(55);
+    }
   }
 
   .grid > &-hero {
     grid-column: 2 / -2;
+
+    @include tablet-p {
+      grid-column: 3 / -3;
+    }
+
+    @include desktop {
+      grid-column: 6 / -6;
+    }
   }
 
   &-hero__btn {
     box-shadow: 0 0 0 rem(1) var(--button);
+
+    @include tablet-p {
+      box-shadow: unset;
+    }
   }
 
   &__divider {
@@ -24,6 +60,10 @@
     flex-direction: column;
 
     @include center-content;
+
+    @include tablet-p {
+      display: none;
+    }
   }
 
   &__divider::before,
@@ -49,6 +89,10 @@
 
   .grid > &-content {
     grid-column: 2 / -2;
+
+    @include desktop {
+      grid-column: 1 / -1;
+    }
   }
 
   &__show-more {
