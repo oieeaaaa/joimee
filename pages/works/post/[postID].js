@@ -113,6 +113,7 @@ const Post = ({ router }) => {
     <Layout title={data.post.title}>
       <div className="post">
         <div className="grid">
+          <h1 className="post__title">{data.post.title}</h1>
           <figure className="post__image-container">
             <img
               className="post__image"
@@ -120,7 +121,6 @@ const Post = ({ router }) => {
               alt={data.post.title}
             />
           </figure>
-          <h1 className="post__title">{data.post.title}</h1>
           <Markdown content={data.post.content} />
           <p className="post__date">
             {parseDate(data.post.createdAt)}

@@ -10,4 +10,9 @@
   letter-spacing: rem(.48);
   box-shadow: 0 0 0 rem(1) $silver;
   border: none;
+  resize: vertical;
+
+  @include tablet-l {
+    min-height: rem(150);
+  }
 }

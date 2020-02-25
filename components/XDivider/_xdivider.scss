@@ -13,7 +13,7 @@
   }
 
   &__triangle {
-    border: ((7.5 / 375) * 100vw) solid transparent;
+    border: rem(10) solid transparent;
     border-top-color: $gray;
     transform: translateY(25%);
   }

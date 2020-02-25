@@ -6,10 +6,18 @@
     line-height: 1.63;
     letter-spacing: rem(.48);
     color: var(--long-text);
+
+    @include tablet-l {
+      font-size: rem(18);
+    }
   }
 
   & > &__p:not(:last-child) {
     margin-bottom: rem(30);
+
+    @include tablet-p {
+      margin-bottom: rem(60);
+    }
   }
 
   &__heading {
@@ -23,18 +31,38 @@
 
   & > &__heading {
     margin-bottom: rem(10);
+
+    @include tablet-p {
+      margin-bottom: rem(15);
+    }
   }
 
   &__heading--1 {
     font-size: rem(18);
+
+    @include tablet-p {
+      font-size: rem(22);
+    }
+
+    @include tablet-l {
+      font-size: rem(24);
+    }
   }
 
   &__heading--2 {
     font-size: rem(18);
+
+    @include tablet-l {
+      font-size: rem(22);
+    }
   }
 
   &__heading--3 {
     font-size: rem(16);
+
+    @include tablet-l {
+      font-size: rem(20);
+    }
   }
 
   &__img {

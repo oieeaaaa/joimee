@@ -30,6 +30,14 @@
     width: ((30 / 375) * 100vw);
     margin-right: rem(10);
     background-color: var(--text);
+
+    @include tablet-p {
+      width: ((40 / 768) * 100vw);
+    }
+
+    @include desktop {
+      max-width: rem(50);
+    }
   }
 
   &__content,
