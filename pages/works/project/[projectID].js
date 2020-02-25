@@ -17,6 +17,7 @@ query Project($id: ID) {
     createdAt,
     content,
     siteUrl,
+    excerpt,
     theme {
       hex
     },
@@ -51,7 +52,7 @@ const Project = ({ router }) => {
   if (loading || !data) return <Loading />;
 
   return (
-    <Layout title={data.project.title}>
+    <Layout title={data.project.title} description={data.project.excerpt}>
       <div aria-label={data.project.title} className="project">
         <div className="project__hero">
           <Text3D
