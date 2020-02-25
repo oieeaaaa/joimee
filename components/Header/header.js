@@ -29,7 +29,7 @@ const Header = ({ router, scrollOffset }) => {
   function renderLinks(links) {
     const [, currentRoute] = router.pathname.split('/'); // get the base path
 
-    return links.map(({ path, name }) => {
+    return links.map(({ path, name, ariaLabel }) => {
       let className = 'header-nav__link';
 
       // root beutification
@@ -44,7 +44,7 @@ const Header = ({ router, scrollOffset }) => {
 
       return (
         <Link key={path} href={path}>
-          <a className={className}>{name}</a>
+          <a aria-label={ariaLabel} className={className}>{name}</a>
         </Link>
       );
     });

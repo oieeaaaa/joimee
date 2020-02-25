@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import ReactMarkdown from 'react-markdown';
 
 const PostCommentList = ({ comments }) => (
-  <ul className="post-comment-list">
+  <ul aria-label="of comments" className="post-comment-list">
     {comments.map(comment => (
       <li key={comment.id} className="post-comment-list__item">
         <div className="post-comment-list__content">

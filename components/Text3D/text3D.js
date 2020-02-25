@@ -1,9 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Text3D = ({ className, text, color }) => (
+const Text3D = ({
+  className,
+  text,
+  color,
+  ...rest
+}) => (
   <>
-    <span className={className ? `${className} text-3D` : 'text-3D'} title={text}>
+    <span className={className ? `${className} text-3D` : 'text-3D'} title={text} {...rest}>
       {text}
     </span>
     <style jsx>

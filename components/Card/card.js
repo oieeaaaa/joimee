@@ -6,7 +6,7 @@ const Card = ({ title, imgLink, color }) => (
     <figure className="card__img-container">
       <img className="card__img" src={imgLink} alt={title} />
     </figure>
-    <h3 className="card__title" title={title}>{title}</h3>
+    <h3 aria-hidden className="card__title" title={title}>{title}</h3>
     <style jsx>
       {`
         .card {

@@ -52,9 +52,10 @@ const Project = ({ router }) => {
 
   return (
     <Layout title={data.project.title}>
-      <div className="project">
+      <div aria-label={data.project.title} className="project">
         <div className="project__hero">
           <Text3D
+            aria-hidden
             text={data.project.title}
             className="project__title"
             color={data.project.theme.hex}

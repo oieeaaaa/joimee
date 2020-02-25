@@ -122,7 +122,10 @@ const Post = ({ router }) => {
             />
           </figure>
           <Markdown content={data.post.content} />
-          <p className="post__date">
+          <p
+            aria-label={`This post was published in ${parseDate(data.post.createdAt)}`}
+            className="post__date"
+          >
             {parseDate(data.post.createdAt)}
           </p>
           <XDivider />
