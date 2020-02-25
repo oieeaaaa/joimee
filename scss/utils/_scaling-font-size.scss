@@ -1,0 +1,3 @@
+@mixin scaling-font-size($font-size, $screen-width) {
+  font-size: calc(#{$font-size}px + #{$font-size} * ((100vw - #{$screen-width}px) / #{$screen-width})); /* stylelint-disable */
+}

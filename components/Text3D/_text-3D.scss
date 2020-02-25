@@ -2,13 +2,26 @@
   --color: var(--fancy-text); // without expression the value would be literal
 
   position: relative;
-  font-size: calc((76 * 1px) + (166 - 76) * ((100vw - 420px) / (1200 - 420)));
   font-weight: bold;
   line-height: 1;
   text-transform: uppercase;
   letter-spacing: rem(2.28);
   color: var(--color);
   z-index: 99;
+
+  @include scaling-font-size(70, 375);
+
+  @include tablet-p {
+    @include scaling-font-size(96, 768);
+  }
+
+  @include tablet-l {
+    @include scaling-font-size(114, 1024);
+  }
+
+  @include desktop {
+    font-size: rem(155);
+  }
 
   &::after {
     content: attr(title);

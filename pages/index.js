@@ -10,7 +10,6 @@ const Home = () => (
     <Hero />
     <RecentProjects />
     <RecentPosts />
-    <Subscribe />
   </Layout>
 );
 
