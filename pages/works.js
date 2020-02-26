@@ -154,7 +154,7 @@ const Works = () => {
   if (!postsData || !projectsData) return <Loading />;
 
   return (
-    <Layout title="Works">
+    <Layout title="Works" description="Collection of Projects and Posts">
       <div className="works">
         <div className="grid">
           <div className="works-hero">

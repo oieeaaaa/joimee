@@ -99,7 +99,7 @@ const About = () => {
   if (loading || !data) return <Loading />;
 
   return (
-    <Layout title="About">
+    <Layout title="About" description="Information about Joimee T. Cajandab">
       <div className="about">
         <div className="grid">
           {renderTitle()}

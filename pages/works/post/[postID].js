@@ -110,7 +110,7 @@ const Post = ({ router }) => {
   if (loading || !data) return <Loading />;
 
   return (
-    <Layout title={data.post.title}>
+    <Layout title={data.post.title} description={`Project ${data.post.title}`}>
       <div className="post">
         <div className="grid">
           <h1 className="post__title">{data.post.title}</h1>
