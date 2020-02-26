@@ -7,8 +7,8 @@ const Hero = () => (
     <div className="grid">
       <Link href="/about">
         <a className="hero__title">
-          <Text3D aria-hidden className="hero__title-text" text="MIMA" />
-          <Text3D aria-hidden className="hero__title-text" text="TOT" />
+          <Text3D aria-hidden className="hero__title-text" text="CODE" />
+          <Text3D aria-hidden className="hero__title-text" text="DESIGN" />
         </a>
       </Link>
       <nav className="hero__nav">
