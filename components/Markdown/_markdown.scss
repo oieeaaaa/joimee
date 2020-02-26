@@ -1,6 +1,10 @@
 .md {
   color: var(--long-text);
 
+  & > * {
+    overflow-x: scroll;
+  }
+
   &__p {
     font-family: $agp;
     line-height: 1.63;
