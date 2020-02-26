@@ -12,10 +12,6 @@
     }
   }
 
-  &__title--em {
-    color: $persimmon;
-  }
-
   .grid > &__title {
     grid-column: 2 / -2;
     margin-top: rem(60);

@@ -87,22 +87,13 @@ const About = () => {
     })
   );
 
-  const renderTitle = () => {
-    let text = 'Joimee Tan Cajandab';
-    text = text.replace(/[oiea]/gi, '<span class="about__title--em">$&</span>');
-
-    return (
-      <div className="about__title" dangerouslySetInnerHTML={{ __html: text }} />
-    );
-  };
-
   if (loading || !data) return <Loading />;
 
   return (
     <Layout title="About" description="Information about Joimee T. Cajandab">
       <div className="about">
         <div className="grid">
-          {renderTitle()}
+          <h1 className="about__title">Joimee Tan Cajandab</h1>
           <div className="about__content">
             <p className="about__text">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris

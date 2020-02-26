@@ -5,7 +5,7 @@ import Text3D from 'components/Text3D/text3D';
 const Hero = () => (
   <section className="hero">
     <div className="grid">
-      <Link href="/about">
+      <Link href="/works">
         <a className="hero__title">
           <Text3D aria-hidden className="hero__title-text" text="CODE" />
           <Text3D aria-hidden className="hero__title-text" text="DESIGN" />

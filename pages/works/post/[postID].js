@@ -21,7 +21,7 @@ const GET_POST = gql`
       image {
         url
       },
-      comments {
+      comments(orderBy: createdAt_DESC) {
         id,
         name,
         content
@@ -101,7 +101,10 @@ const Post = ({ router }) => {
       data: {
         post: {
           ...post,
-          comments: post.comments.concat([createPostComment]),
+          comments: [
+            createPostComment,
+            ...post.comments,
+          ],
         },
       },
     });
