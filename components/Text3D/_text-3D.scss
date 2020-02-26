@@ -9,7 +9,7 @@
   color: var(--color);
   z-index: 99;
 
-  @include scaling-font-size(70, 375);
+  @include scaling-font-size(50, 375);
 
   @include tablet-p {
     @include scaling-font-size(96, 768);
