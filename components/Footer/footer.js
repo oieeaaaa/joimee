@@ -51,7 +51,7 @@ const Footer = ({ router }) => {
       <div className="grid">
         <Link href="/">
           <a className={pathname.length === 1 ? 'footer__title active' : 'footer__title'}>
-            <Text3D text="bok" color="#838383" />
+            <Text3D text="BOK" color="#838383" />
           </a>
         </Link>
         <div className="footer-list">
@@ -68,7 +68,7 @@ const Footer = ({ router }) => {
       </div>
       <div className="footer-bottom">
         <p className="footer-bottom__text">
-          {`bok © ${year}; All rights reserved.`}
+          {`joimee © ${year}; I love simplicity! ✨`}
         </p>
       </div>
     </footer>

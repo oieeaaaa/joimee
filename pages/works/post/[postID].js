@@ -18,6 +18,7 @@ const GET_POST = gql`
       title,
       createdAt,
       content,
+      excerpt,
       image {
         url
       },
@@ -113,7 +114,7 @@ const Post = ({ router }) => {
   if (loading || !data) return <Loading />;
 
   return (
-    <Layout title={data.post.title} description={`Project ${data.post.title}`}>
+    <Layout title={data.post.title} description={data.post.excerpt}>
       <div className="post">
         <div className="grid">
           <h1 className="post__title">{data.post.title}</h1>

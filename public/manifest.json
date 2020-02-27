@@ -1,6 +1,6 @@
 {
-  "name": "Bok",
-  "short_name": "bok",
+  "name": "Joimee Tan Cajandab",
+  "short_name": "Joimee",
   "theme_color": "#ff5555",
   "background_color": "#f5f5f5",
   "display": "standalone",
@@ -29,18 +29,8 @@
       "type": "image/png"
     },
     {
-      "src": "icons/icon-152x152.png",
-      "sizes": "152x152",
-      "type": "image/png"
-    },
-    {
       "src": "icons/icon-192x192.png",
       "sizes": "192x192",
-      "type": "image/png"
-    },
-    {
-      "src": "icons/icon-384x384.png",
-      "sizes": "384x384",
       "type": "image/png"
     },
     {

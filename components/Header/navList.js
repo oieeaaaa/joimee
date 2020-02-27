@@ -5,7 +5,7 @@ export default [
     path: '/works',
   },
   {
-    name: 'bok',
+    name: 'joimee',
     ariaLabel: 'home page',
     path: '/',
   },

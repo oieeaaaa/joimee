@@ -46,9 +46,7 @@ class App extends React.Component {
           <link rel="apple-touch-icon" href="/icons/icon-96x96.png" />
           <link rel="apple-touch-icon" href="/icons/icon-128x128.png" />
           <link rel="apple-touch-icon" href="/icons/icon-144x144.png" />
-          <link rel="apple-touch-icon" href="/icons/icon-152x152.png" />
           <link rel="apple-touch-icon" href="/icons/icon-192x192.png" />
-          <link rel="apple-touch-icon" href="/icons/icon-384x384.png" />
           <link rel="apple-touch-icon" href="/icons/icon-512x512.png" />
           <link rel="apple-touch-startup-image" href="/images/launch-screen.png" />
 

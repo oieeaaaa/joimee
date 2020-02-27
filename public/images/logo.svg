@@ -1,3 +1,33 @@
-<svg width="250" height="250" viewBox="0 0 250 250" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M0 0H250L124.5 250L0 0Z" fill="#FF5555"/>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="74" width="110.79999999999995">
+  <defs>
+    <rect id="rect-1" opacity="1" x="1" y="0" width="78" height="74"/>
+    <mask id="mask-2" maskUnits="userSpaceOnUse" maskContentUnits="userSpaceOnUse">
+      <rect opacity="1" x="0" y="0" width="110.79999999999995" height="74" fill="Black"/>
+      <use xlink:href="#rect-1" fill="White"/>
+    </mask>
+  </defs>
+  <g opacity="1">
+    <g opacity="1">
+      <use xlink:href="#rect-1" fill="rgb(255,85,85)" fill-opacity="1"/>
+    </g>
+    <g mask="url(#mask-2)">
+      <g opacity="1">
+        <g opacity="1">
+          <rect fill="rgb(0,0,0)" fill-opacity="1" opacity="1" x="1" y="0" width="78" height="3"/>
+        </g>
+        <g opacity="1">
+          <text font-size="0" transform="translate(0, 0)">
+            <tspan font-size="37" font-family="Modern Era" font-weight="700" style="white-space: pre;text-transform: none" fill="rgb(0,0,0)" letter-spacing="1.07" x="0" y="35">jo</tspan>
+            <tspan font-size="37" font-family="Modern Era" font-weight="700" style="white-space: pre;text-transform: none" fill="rgb(255,255,255)" letter-spacing="1.07">i</tspan>
+          </text>
+        </g>
+        <g opacity="1">
+          <text font-size="0" transform="translate(33.799999999999955, 29)">
+            <tspan font-size="37" font-family="Modern Era" font-weight="700" style="white-space: pre;text-transform: none" fill="rgb(255,255,255)" letter-spacing="1.07" x="0" y="35">me</tspan>
+            <tspan font-size="37" font-family="Modern Era" font-weight="700" style="white-space: pre;text-transform: lowercase" fill="rgb(255,85,85)" letter-spacing="1.07">e</tspan>
+          </text>
+        </g>
+      </g>
+    </g>
+  </g>
 </svg>
