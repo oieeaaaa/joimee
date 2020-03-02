@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { gql } from 'apollo-boost';
 import { useLazyQuery } from '@apollo/react-hooks';
+import Link from 'next/link';
 import Layout from 'components/Layout/layout';
 import throttle from 'lodash.throttle';
 import Loading from 'components/Loading/loading';
@@ -96,15 +97,32 @@ const About = () => {
           <h1 className="about__title">Joimee Tan Cajandab</h1>
           <div className="about__content">
             <p className="about__text">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
-              sagittis justo et enim egestas gravida.
+              Hi there, My name is Joimee and I do web stuff you can check out my projects&nbsp;
+              <Link href="/works">
+                <a className="about__link">here</a>
+              </Link>
+              .
             </p>
             <p className="about__text">
-              Praesent commodo orci tellus, in tristique nibh fermentum sed.
+              I&apos;m young and I&apos;m single.
+              <br />
+              I&apos;m also interested in writing.
+              <br />
+              I enjoy having a conversation with friends.
+              <br />
+              I can play the river flows with my guitar.
+              <br />
+              I can be a friend if you need one.
+              <br />
             </p>
             <p className="about__text">
-              Etiam vel ultrices magna. Donec condimentum finibus odio eu
-              sollicitudin. Cras viverra est eget erat feugiat feugiat.
+              Need to talk? You can send me an&nbsp;
+              <a className="about__link" href="mailto:joimee.cajandab@gmail.com">email</a>
+              .
+              <br />
+            </p>
+            <p className="about__text">
+              Thanks.
             </p>
           </div>
         </div>

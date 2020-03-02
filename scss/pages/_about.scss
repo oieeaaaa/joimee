@@ -37,6 +37,15 @@
     }
   }
 
+  &__link {
+    text-decoration: none;
+    color: $persimmon;
+  }
+
+  &__link:hover {
+    text-decoration: underline;
+  }
+
   &__content > &__text:not(:last-child) {
     margin-bottom: rem(30);
   }

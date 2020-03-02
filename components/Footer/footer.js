@@ -68,7 +68,7 @@ const Footer = ({ router }) => {
       </div>
       <div className="footer-bottom">
         <p className="footer-bottom__text">
-          {`joimee © ${year}; I love simplicity! ✨`}
+          {`joimee © ${year}.`}
         </p>
       </div>
     </footer>
