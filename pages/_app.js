@@ -2,23 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 import PropTypes from 'prop-types';
 import ThemePicker from 'components/ThemePicker/themePicker';
-import fetch from 'isomorphic-unfetch';
-import { ApolloProvider } from '@apollo/react-common';
-import ApolloClient from 'apollo-client';
-import { createHttpLink } from 'apollo-link-http';
-import { InMemoryCache } from 'apollo-cache-inmemory';
 import 'scss/main.scss';
-
-const client = new ApolloClient({
-  ssrMode: true,
-  link: createHttpLink({
-    uri: process.env.API,
-    credentials: 'same-origin',
-    fetch,
-  }),
-  cache: new InMemoryCache(),
-});
-
 
 class App extends React.Component {
   componentDidMount() {
@@ -39,7 +23,7 @@ class App extends React.Component {
     const { Component, pageProps } = this.props;
 
     return (
-      <ApolloProvider client={client}>
+      <>
         <Head>
           <link rel="manifest" href="/manifest.json" />
           <link rel="apple-touch-icon" href="/icons/icon-72x72.png" />
@@ -57,7 +41,7 @@ class App extends React.Component {
           <Component {...pageProps} />
           <ThemePicker />
         </main>
-      </ApolloProvider>
+      </>
     );
   }
 }
