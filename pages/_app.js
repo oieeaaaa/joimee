@@ -1,6 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 import PropTypes from 'prop-types';
+import { MDXProvider } from '@mdx-js/tag';
 import ThemePicker from 'components/ThemePicker/themePicker';
 import 'scss/main.scss';
 
@@ -23,7 +24,7 @@ class App extends React.Component {
     const { Component, pageProps } = this.props;
 
     return (
-      <>
+      <MDXProvider>
         <Head>
           <link rel="manifest" href="/manifest.json" />
           <link rel="apple-touch-icon" href="/icons/icon-72x72.png" />
@@ -41,7 +42,7 @@ class App extends React.Component {
           <Component {...pageProps} />
           <ThemePicker />
         </main>
-      </>
+      </MDXProvider>
     );
   }
 }
