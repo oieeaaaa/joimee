@@ -3,7 +3,8 @@ export const meta = {
   summary: 'Test',
   published: true,
   publishedAt: '2020-01-03',
-  image: '',
+  image: '/images/3.webp',
+  color: 'black',
 };
 
 # Test
