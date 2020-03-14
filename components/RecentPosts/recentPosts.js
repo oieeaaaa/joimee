@@ -4,25 +4,19 @@ import Link from 'next/link';
 import PostCard from 'components/PostCard/postCard';
 import posts from 'data/posts';
 
-const RecentPosts = () => {
-  console.log(posts);
-
-  // if (loading) return <Loading />;
-  // if (error) return <div>Error!!!</div>;
-  return (
-    <section className="recent-posts">
-      <div className="grid">
-        <Heading text="Recent Posts" />
-        {posts.map(post => (
-          <Link key={post.path} href={post.path}>
-            <a className="recent-posts__item">
-              <PostCard title={post.title} excerpt={post.summary} date={post.publishedAt} />
-            </a>
-          </Link>
-        ))}
-      </div>
-    </section>
-  );
-};
+const RecentPosts = () => (
+  <section className="recent-posts">
+    <div className="grid">
+      <Heading text="Recent Posts" />
+      {posts.map(post => (
+        <Link key={post.path} href={post.path}>
+          <a className="recent-posts__item">
+            <PostCard title={post.title} excerpt={post.summary} date={post.publishedAt} />
+          </a>
+        </Link>
+      ))}
+    </div>
+  </section>
+);
 
 export default RecentPosts;
