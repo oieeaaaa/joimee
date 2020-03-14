@@ -2,13 +2,13 @@ import React from 'react';
 import Heading from 'components/Heading/heading';
 import Link from 'next/link';
 import PostCard from 'components/PostCard/postCard';
-import posts from 'posts';
+import posts from 'data/posts';
 
 const RecentPosts = () => {
   console.log(posts);
 
-  if (loading) return <Loading />;
-  if (error) return <div>Error!!!</div>;
+  // if (loading) return <Loading />;
+  // if (error) return <div>Error!!!</div>;
   return (
     <section className="recent-posts">
       <div className="grid">
