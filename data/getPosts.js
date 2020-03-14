@@ -1,8 +1,9 @@
+// @preval
 const fs = require('fs');
 const path = require('path');
 
 const META = /export\s+const\s+meta\s+=\s+(\{(\n|.)*?\n\})/;
-const DIR = path.join(process.cwd(), './pages/posts');
+const DIR = path.join(process.cwd(), './pages/works/posts');
 const files = fs.readdirSync(DIR);
 
 const blogPosts = files.map(file => {
@@ -17,7 +18,7 @@ const blogPosts = files.map(file => {
 
   return {
     ...meta,
-    path: `/works/post/${file.replace(/\.mdx?$/, '')}`,
+    path: `/works/posts/${file.replace(/\.mdx?$/, '')}`,
   };
 }).filter(meta => meta.published).sort((a, b) => new Date(b.publishedAt) - new Date(a.publishedAt));
 
