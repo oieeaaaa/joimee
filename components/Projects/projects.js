@@ -4,8 +4,7 @@ import Link from 'next/link';
 
 const ProjectsItem = ({ data }) => (
   <Link
-    href="/works/project/[projectID]"
-    as={`/works/project/${data.id}`}
+    href={data.path}
   >
     <a className="projects__link">
       <div className="projects__card">
@@ -14,15 +13,15 @@ const ProjectsItem = ({ data }) => (
         </h3>
         <figure
           style={{
-            backgroundColor: data.theme.hex,
-            borderColor: data.theme.hex,
+            backgroundColor: data.color,
+            borderColor: data.color,
           }}
           className="projects__img-container"
         >
           <img
             className="projects__img"
-            src={data.image.url}
-            alt={data.image.fileName}
+            src={data.image}
+            alt={data.title}
           />
         </figure>
       </div>
@@ -33,7 +32,7 @@ const ProjectsItem = ({ data }) => (
 const Projects = ({ data }) => {
   const renderProjects = projects => (
     projects.map(project => (
-      <ProjectsItem key={project.id} data={project} />
+      <ProjectsItem key={project.path} data={project} />
     ))
   );
 
@@ -46,11 +45,10 @@ const Projects = ({ data }) => {
 
 ProjectsItem.propTypes = {
   data: PropTypes.shape({
-    id: PropTypes.string,
+    path: PropTypes.string,
     title: PropTypes.string,
-    createdAt: PropTypes.string,
-    theme: PropTypes.object,
-    image: PropTypes.object,
+    color: PropTypes.string,
+    image: PropTypes.string,
   }).isRequired,
 };
 

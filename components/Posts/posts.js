@@ -5,15 +5,14 @@ import PostCard from 'components/PostCard/postCard';
 
 const PostsItem = ({ data }) => (
   <Link
-    key={data.id}
-    href="/works/post/[postID]"
-    as={`/works/post/${data.id}`}
+    key={data.path}
+    href={data.path}
   >
     <a className="posts__link">
       <PostCard
         title={data.title}
-        excerpt={data.excerpt}
-        date={data.createdAt}
+        excerpt={data.summary}
+        date={data.publishedAt}
       />
     </a>
   </Link>
@@ -22,7 +21,7 @@ const PostsItem = ({ data }) => (
 const Posts = ({ data }) => {
   const renderPosts = posts => (
     posts.map(post => (
-      <PostsItem key={post.id} data={post} />
+      <PostsItem key={post.path} data={post} />
     ))
   );
 
@@ -35,10 +34,10 @@ const Posts = ({ data }) => {
 
 PostsItem.propTypes = {
   data: PropTypes.shape({
-    id: PropTypes.string,
+    path: PropTypes.string,
     title: PropTypes.string,
-    excerpt: PropTypes.string,
-    createdAt: PropTypes.string,
+    summary: PropTypes.string,
+    publishedAt: PropTypes.string,
   }).isRequired,
 };
 
