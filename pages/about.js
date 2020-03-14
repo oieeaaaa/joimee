@@ -1,94 +1,26 @@
 import React, { useState, useEffect } from 'react';
-import { gql } from 'apollo-boost';
-import { useLazyQuery } from '@apollo/react-hooks';
 import Link from 'next/link';
 import Layout from 'components/Layout/layout';
-import throttle from 'lodash.throttle';
-import Loading from 'components/Loading/loading';
 import ImgLazy from 'components/ImgLazy/imgLazy';
-
-const GET_GALLERIES = gql`
-query Galleries($last: Int) {
-  galleries(last: $last) {
-    id,
-    name,
-    image {
-      url
-      width,
-      height
-    }
-  }
-  total: galleriesConnection {
-    aggregate {
-      count
-    }
-  }
-}
-`;
+import gallery from 'data/gallery';
 
 const About = () => {
-  const imageToDisplay = 5;
-  const [limit, setLimit] = useState(imageToDisplay);
-  const [loadGalleries, { data, loading }] = useLazyQuery(GET_GALLERIES, {
-    variables: {
-      last: limit,
-    },
-  });
-
-  useEffect(() => {
-    loadGalleries({
-      variables: {
-        last: limit,
-      },
-    });
-  }, [limit]);
-
-  useEffect(() => {
-    if (!data) return;
-    const total = data.total.aggregate.count;
-
-    window.addEventListener('scroll', handleInfiniteScroll);
-    if (total <= imageToDisplay) {
-      window.removeEventListener('scroll', handleInfiniteScroll);
-    }
-
-    return () => window.removeEventListener('scroll', handleInfiniteScroll); // eslint-disable-line
-  }, [data]);
-
-  function handleInfiniteScroll() {
-    if (loading) return;
-    const OFFSET = 50;
-    const currentHeight = window.innerHeight + window.scrollY;
-    const bodyHeight = document.body.offsetHeight;
-
-    throttle(() => {
-      if (currentHeight + OFFSET >= bodyHeight) {
-        setLimit(10);
-      }
-    }, 300)();
-  }
-
-
-  const renderImage = galleries => (
-    galleries.map(gallery => {
-      const { id, name, image } = gallery;
+  const renderImage = gallery => (
+    gallery.map(image => {
+      const { src, alt, width, height } = image;
       let imageClass = 'about__gallery-image';
-      if (image.height > image.width) {
+
+      if (height > width) {
         imageClass += ' about__gallery-image--portrait';
       }
 
       return (
-        <ImgLazy
-          key={id}
-          className={imageClass}
-          src={image.url}
-          alt={name}
-        />
+        <div key={src} className={imageClass}>
+          <img src={src} alt={alt} />
+        </div>
       );
     })
   );
-
-  if (loading || !data) return <Loading />;
 
   return (
     <Layout title="About" description="Information about Joimee T. Cajandab">
@@ -122,12 +54,12 @@ const About = () => {
               <br />
             </p>
             <p className="about__text">
-              Thanks.
+              Thanks for checking out my site 😉.
             </p>
           </div>
         </div>
         <div className="about__gallery">
-          {renderImage(data.galleries)}
+          {renderImage(gallery)}
         </div>
       </div>
     </Layout>

@@ -73,6 +73,13 @@
 
   &__gallery-image {
     min-height: rem(80);
+
+  }
+
+  &__gallery-image > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 
   &__gallery-image--portrait {
