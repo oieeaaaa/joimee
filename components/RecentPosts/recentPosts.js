@@ -1,25 +1,11 @@
 import React from 'react';
 import Heading from 'components/Heading/heading';
 import Link from 'next/link';
-import { gql } from 'apollo-boost';
-import { useQuery } from '@apollo/react-hooks';
 import PostCard from 'components/PostCard/postCard';
-import Loading from 'components/Loading/loading';
-
-const GET_RECENT_POSTS = gql`
-  query {
-    posts(orderBy: createdAt_ASC, last: 3) {
-      title,
-      id,
-      slug,
-      excerpt,
-      createdAt
-    }
-  }
-`;
+import posts from 'posts';
 
 const RecentPosts = () => {
-  const { loading, error, data } = useQuery(GET_RECENT_POSTS);
+  console.log(posts);
 
   if (loading) return <Loading />;
   if (error) return <div>Error!!!</div>;
@@ -27,10 +13,10 @@ const RecentPosts = () => {
     <section className="recent-posts">
       <div className="grid">
         <Heading text="Recent Posts" />
-        {data.posts.map(post => (
-          <Link key={post.id} href="/works/post/[postID]" as={`/works/post/${post.id}`}>
+        {posts.map(post => (
+          <Link key={post.path} href={post.path}>
             <a className="recent-posts__item">
-              <PostCard title={post.title} excerpt={post.excerpt} date={post.createdAt} />
+              <PostCard title={post.title} excerpt={post.summary} date={post.publishedAt} />
             </a>
           </Link>
         ))}
