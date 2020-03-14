@@ -6,12 +6,6 @@ import ThemePicker from 'components/ThemePicker/themePicker';
 import 'scss/main.scss';
 
 class App extends React.Component {
-  componentDidMount() {
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('/sw.js');
-    }
-  }
-
   componentWillUnmount() {
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.ready.then(registration => {
