@@ -2,7 +2,6 @@
 @import './base/theme';
 @import './base/fonts';
 @import './base/reset';
-@import './base/global';
 
 // utils
 @import './utils/rem';
@@ -16,9 +15,8 @@
 @import './layouts/alignment';
 
 // commons
-@import './commons/with-dashes';
-@import './commons/states';
 @import './commons/animations';
+@import './commons/global';
 
 // components
 @import 'components/Header/header';
