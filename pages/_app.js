@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { MDXProvider } from '@mdx-js/react';
 import ThemePicker from 'components/ThemePicker/themePicker';
 import P from 'components/P/p';
-import H1 from 'components/H1/h1';
+import H1 from 'components/H1/H1';
 import H2 from 'components/H2/h2';
 import H3 from 'components/H3/h3';
 import UL from 'components/UL/ul';
