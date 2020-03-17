@@ -1,0 +1,5 @@
+.hr {
+  margin: rem(40) auto;
+
+  @include md-width;
+}

@@ -2,6 +2,7 @@
 @import './base/theme';
 @import './base/fonts';
 @import './base/reset';
+@import './base/global';
 
 // utils
 @import './utils/rem';
@@ -37,15 +38,23 @@
 @import 'components/Label/label';
 @import 'components/TextArea/textarea';
 @import 'components/PostCommentList/post-comment-list';
-@import 'components/Markdown/markdown';
 @import 'components/Projects/projects';
 @import 'components/Posts/posts';
 @import 'components/Loading/loading';
 @import 'components/ThemePicker/theme-picker';
 @import 'components/ImgLazy/img-lazy';
+@import 'components/Post/post';
+@import 'components/GoBack/go-back';
+@import 'components/P/p';
+@import 'components/H1/h1';
+@import 'components/H2/h2';
+@import 'components/H3/h3';
+@import 'components/UL/ul';
+@import 'components/OL/ol';
+@import 'components/PRE/pre';
+@import 'components/HR/hr';
+@import 'components/IMG/img';
 
 // pages
-@import './pages/post';
-@import './pages/project';
 @import './pages/works';
 @import './pages/about';

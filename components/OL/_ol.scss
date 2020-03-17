@@ -1,0 +1,16 @@
+.ol {
+  margin-bottom: rem(20);
+  padding-left: 1em;
+
+  @include md-width;
+
+  & p,
+  & pre {
+    max-width: unset;
+  }
+
+  & ul,
+  & ol {
+    margin-left: unset;
+  }
+}

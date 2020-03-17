@@ -1,0 +1,9 @@
+.h2 {
+  font-size: rem(28);
+  line-height: 1.2;
+  margin-top: rem(40);
+  margin-bottom: rem(20);
+  max-width: set-width(8, 10);
+
+  @include md-width;
+}

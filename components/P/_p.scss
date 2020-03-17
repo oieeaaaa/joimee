@@ -1,0 +1,7 @@
+.p {
+  font-size: rem(18);
+  line-height: 1.32;
+  margin-bottom: rem(30);
+
+  @include md-width;
+}

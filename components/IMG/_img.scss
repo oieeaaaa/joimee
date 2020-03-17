@@ -1,0 +1,11 @@
+.img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  &-container {
+    @include aspect-ratio(1, 1);
+
+    margin: rem(40) 0;
+  }
+}

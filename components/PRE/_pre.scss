@@ -1,0 +1,6 @@
+.pre {
+  overflow: scroll;
+  margin-bottom: rem(30);
+
+  @include md-width;
+}

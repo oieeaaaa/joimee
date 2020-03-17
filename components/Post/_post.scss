@@ -1,0 +1,33 @@
+.post {
+  &-header {
+    margin: rem(50) auto;
+
+    @include md-width;
+  }
+
+  &__title {
+    font-size: rem(34);
+    line-height: 1em;
+  }
+
+  &-header > .go-back {
+    margin-bottom: rem(60);
+  }
+
+  &-header > &__title {
+    margin-bottom: rem(20);
+  }
+
+  a {
+    color: $persimmon;
+    text-decoration: none;
+  }
+
+  &-footer {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: rem(60);
+
+    @include md-width;
+  }
+}
