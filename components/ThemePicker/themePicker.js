@@ -11,13 +11,15 @@ const ThemePicker = () => {
   useEffect(() => {
     const { matches } = window.matchMedia('(prefers-color-scheme: dark)');
     window.ontouchstart = handleTouch;
+    const isDark = localStorage.getItem('isDark');
 
-    if (matches) {
+    if (matches || isDark) {
       setIsDark(true);
     }
 
     return () => {
       window.ontouchstart = null;
+      localStorage.removeItem('isDark');
     };
   }, []);
 
@@ -57,6 +59,12 @@ const ThemePicker = () => {
 
   const toggleDark = e => {
     e.preventDefault();
+    if (isDark) {
+      localStorage.setItem('isDark', '');
+    } else {
+      localStorage.setItem('isDark', true);
+    }
+
     setIsDark(!isDark);
   };
 
