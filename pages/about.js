@@ -15,9 +15,7 @@ const About = () => {
       }
 
       return (
-        <div key={src} className={imageClass}>
-          <img src={src} alt={alt} />
-        </div>
+        <ImgLazy key={src} src={src} className={imageClass} alt={alt} />
       );
     })
   );
