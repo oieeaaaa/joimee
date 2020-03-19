@@ -24,7 +24,7 @@ const About = () => {
     <Layout title="About" description="Information about Joimee T. Cajandab">
       <div className="about">
         <div className="grid">
-          <h1 className="about__title">Joimee Tan Cajandab</h1>
+          <h1 className="about__title">About me</h1>
           <div className="about__content">
             <p className="about__text">
               Hi there, My name is Joimee and I do web stuff you can check some of my projects&nbsp;
