@@ -27,23 +27,24 @@ const About = () => {
           <h1 className="about__title">Joimee Tan Cajandab</h1>
           <div className="about__content">
             <p className="about__text">
-              Hi there, My name is Joimee and I do web stuff you can check out my projects&nbsp;
+              Hi there, My name is Joimee and I do web stuff you can check some of my projects&nbsp;
               <Link href="/works">
                 <a className="about__link">here</a>
               </Link>
               .
             </p>
             <p className="about__text">
-              I&apos;m young and I&apos;m single.
+              I&apos;m young and single
               <br />
-              I&apos;m also interested in writing.
+              I don't have so much to do with my life other than coding, making designs, and reading books
+            </p>
+            <p className="about__text">
+              I've also fallen in love with writing
               <br />
-              I enjoy having a conversation with friends.
-              <br />
-              I can play the river flows with my guitar.
-              <br />
-              I can be a friend if you need one.
-              <br />
+              I love solving problems and learning new concepts
+            </p>
+            <p className="about__text">
+              And if I am not around I'm probably playing a song with my guitar or reading some non-fiction book
             </p>
             <p className="about__text">
               Need to talk? You can send me an&nbsp;
@@ -52,7 +53,7 @@ const About = () => {
               <br />
             </p>
             <p className="about__text">
-              Thanks for checking out my site 😉.
+              Thanks!
             </p>
           </div>
         </div>
