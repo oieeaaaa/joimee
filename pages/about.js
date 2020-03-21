@@ -34,7 +34,7 @@ const About = () => {
               .
             </p>
             <p className="about__text">
-              I&apos;m young passionate in learning. I don't have so much to do
+              I&apos;m young and very passionate in learning. I don't have so much to do
               with my life other than coding, making designs, and reading books
               </p>
             <p className="about__text">
