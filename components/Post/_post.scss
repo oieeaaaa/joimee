@@ -1,6 +1,6 @@
 .post {
   &-header {
-    margin: rem(50) auto;
+    margin: rem(50) auto rem(150);
 
     @include md-width;
   }

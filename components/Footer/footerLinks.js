@@ -22,5 +22,9 @@ export default {
       name: 'dribbble',
       href: 'https://dribbble.com/Joimee',
     },
+    {
+      name: 'github',
+      href: 'https://github.com/oieeaaaa',
+    },
   ],
 };
