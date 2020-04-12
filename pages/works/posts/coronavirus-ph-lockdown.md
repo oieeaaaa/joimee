@@ -25,7 +25,7 @@ with my colleagues, and most of all I miss the free breakfast on Mondays.
 
 What I don't miss is the building. Yeah, the building that almost got me killed
 twice, the building that will decide whether you will live or not once you ride one of
-their elevators, the building that had a funny smell on the 11th floor when some other folk leave
+its elevators, the building that had a funny smell on the 11th floor when some other folk leave
 the public restroom open.
 
 However, I'm so glad we have moved to a new office now, Yeah we moved but same
