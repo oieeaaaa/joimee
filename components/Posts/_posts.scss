@@ -11,8 +11,8 @@
   }
 
   @include desktop {
-    grid-template-columns: 1fr rem(59.5) 1fr rem(59.5) 1fr;
-    grid-row-gap: rem(70);
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: rem(50);
   }
 
   &__link {
@@ -29,30 +29,8 @@
     }
   }
 
-  & > &__link:nth-child(2n) {
-    @include tablet-l {
-      margin-left: auto;
-    }
-
-    @include desktop {
-      grid-column: 3 / span 1;
-      margin-left: unset;
-    }
-  }
-
-  & > &__link:nth-child(3n) {
-    @include desktop {
-      grid-column: -2 / -1;
-      margin-left: unset;
-    }
-  }
-
   & > &__link:not(:last-child) {
     margin-bottom: rem(30);
-
-    @include tablet-p {
-      margin-bottom: rem(60);
-    }
 
     @include tablet-l {
       margin-bottom: 0;
