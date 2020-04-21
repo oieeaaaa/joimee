@@ -17,6 +17,20 @@
   }
 }
 
+@mixin overlap-width {
+  width: 100%;
+  max-width: unset;
+
+  @include tablet-p {
+    width: set-width(10, 12);
+    margin: 0 auto;
+  }
+
+  @include desktop {
+    width: set-width(12, 20);
+  }
+}
+
 // states
 .active {
   color: $persimmon !important;

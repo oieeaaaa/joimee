@@ -4,4 +4,8 @@
   margin-bottom: rem(30);
 
   @include md-width;
+
+  &.image-wrapper {
+    @include overlap-width;
+  }
 }

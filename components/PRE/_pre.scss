@@ -1,17 +1,8 @@
 .pre {
-  width: 100%;
-
   .prism-code {
     overflow: scroll;
     margin-bottom: rem(30);
   }
 
-  @include tablet-p {
-    width: set-width(10, 12);
-    margin: 0 auto;
-  }
-
-  @include desktop {
-    width: set-width(12, 20);
-  }
+  @include overlap-width;
 }
