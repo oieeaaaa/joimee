@@ -1,27 +1,28 @@
 import Head from 'next/head';
 import Layout from 'components/Layout/layout';
+import Markdown from 'components/Markdown/markdown';
 import GoBack from 'components/GoBack/goBack';
 import parseDate from 'js/utils/parseDate';
 
 const Post = ({ meta, children }) => (
   <Layout title={meta.title}>
-    <div className="post">
+    <Markdown>
       <Head>
         <meta name="title" content={meta.title} />
         <meta name="description" key="description" content={meta.summary} />
       </Head>
-      <div className="post-header">
+      <div className="markdown-header">
         <GoBack />
-        <h1 className="post__title">{meta.title}</h1>
-        <p>{parseDate(meta.publishedAt)}</p>
+        <h1 className="markdown__title">{meta.title}</h1>
+        <p className="markdown__date">{parseDate(meta.publishedAt)}</p>
       </div>
-      <article className="post-content">
+      <article className="markdown-content">
         {children}
       </article>
-      <div className="post-footer">
+      <div className="markdown-footer">
         <GoBack />
       </div>
-    </div>
+    </Markdown>
   </Layout>
 );
 

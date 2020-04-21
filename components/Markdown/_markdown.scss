@@ -1,4 +1,4 @@
-.project {
+.markdown {
   &-hero {
     margin-top: rem(40);
   }
@@ -19,12 +19,30 @@
     line-height: 1em;
   }
 
+  &__date {
+    font-family: $me;
+  }
+
   &-header > .go-back {
     margin-bottom: rem(60);
   }
 
   &-header > &__title {
     margin-bottom: rem(20);
+  }
+
+  &-content {
+    em, b, strong {
+      @include AGaramondPro('Bold');
+    }
+
+    i {
+      @include AGaramondPro('Italic');
+    }
+
+    p, a, li {
+      @include AGaramondPro;
+    }
   }
 
   a {

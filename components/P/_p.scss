@@ -1,6 +1,7 @@
 .p {
   font-size: rem(18);
-  line-height: 1.32;
+  line-height: 1.58;
+  letter-spacing: rem(.5);
   margin-bottom: rem(30);
 
   @include md-width;
