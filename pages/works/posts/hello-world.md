@@ -9,4 +9,4 @@ export const meta = {
 
 export default ({ children }) => <Post meta={meta}>{children}</Post>;
 
-I've made it Mom! Oh Thank GOD.
+Hello World.
