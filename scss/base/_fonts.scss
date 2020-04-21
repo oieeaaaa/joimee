@@ -1,5 +1,38 @@
 $font-root-size: 10;
 $me: 'Modern Era', sans-serif;
+$ag-pro: 'AGaramondPro-Regular', serif;
+
+// AGaramond Pro
+@font-face {
+  font-family: 'AGaramondPro-SemiboldItalic';
+  src: url('/fonts/AGaramondPro-SemiboldItalic.otf');
+}
+
+@font-face {
+  font-family: 'AGaramondPro-BoldItalic';
+  src: url('/fonts/AGaramondPro-BoldItalic.otf');
+}
+
+@font-face {
+  font-family: 'AGaramondPro-Semibold';
+  src: url('/fonts/AGaramondPro-Semibold.otf');
+}
+
+@font-face {
+  font-family: 'AGaramondPro-Bold';
+  src: url('/fonts/AGaramondPro-Bold.otf');
+}
+
+@font-face {
+  font-family: 'AGaramondPro-Italic';
+  src: url('/fonts/AGaramondPro-Italic.otf');
+}
+
+@font-face {
+  font-family: 'AGaramondPro-Regular';
+  src: url('/fonts/AGaramondPro-Regular.otf');
+}
+
 
 // Modern Era
 @font-face {

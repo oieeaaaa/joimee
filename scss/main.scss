@@ -8,6 +8,7 @@
 @import './utils/decorators';
 @import './utils/set-width';
 @import './utils/scaling-font-size';
+@import './utils/fonts';
 
 // layouts
 @import './layouts/grid';
@@ -37,7 +38,6 @@
 @import 'components/Loading/loading';
 @import 'components/ThemePicker/theme-picker';
 @import 'components/ImgLazy/img-lazy';
-@import 'components/Post/post';
 @import 'components/GoBack/go-back';
 @import 'components/P/p';
 @import 'components/H1/H1';
@@ -48,7 +48,7 @@
 @import 'components/PRE/pre';
 @import 'components/HR/hr';
 @import 'components/IMG/img';
-@import 'components/Project/project';
+@import 'components/Markdown/markdown';
 
 // pages
 @import './pages/works';

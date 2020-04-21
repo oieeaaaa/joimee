@@ -27,10 +27,11 @@
   }
 
   &__text {
-    font-family: $me;
     line-height: 1.43;
     letter-spacing: rem(.48);
     color: var(--long-text);
+
+    @include AGaramondPro;
 
     @include tablet-l {
       font-size: rem(18);

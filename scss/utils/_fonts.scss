@@ -1,0 +1,5 @@
+@mixin AGaramondPro($weight: 'Regular') {
+  $family: "AGaramondPro-" + $weight;
+
+  font-family: $family;
+}

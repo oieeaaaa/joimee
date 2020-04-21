@@ -6,6 +6,7 @@
 
   & p,
   & pre {
+    @include AGaramondPro;
     max-width: unset;
   }
 
