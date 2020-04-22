@@ -13,6 +13,7 @@ import PRE from 'components/PRE/pre';
 import HR from 'components/HR/hr';
 import IMG from 'components/IMG/img';
 import CODE from 'components/CODE/code';
+import BLOCKQUOTE from 'components/BLOCKQUOTE/blockquote';
 import 'scss/main.scss';
 
 const components = {
@@ -26,6 +27,7 @@ const components = {
   hr: HR,
   img: IMG,
   code: CODE,
+  blockquote: BLOCKQUOTE,
 };
 
 class App extends React.Component {

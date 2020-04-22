@@ -49,4 +49,4 @@ And sometimes all you need to do is to allow the subconscious mind to start your
 
 I like to end this post with a quote from Napoleon Hill.
 
-> The subconscious mind makes no distinction between constructive and destructive thought impulses. It works with the material we feed it, through our thought impulses. The subconscious mind will translate into reality a thought driven by fear, just as readily as it will translate into reality a thought driven by courage or faith.
+> The subconscious mind makes no distinction between constructive and destructive thought impulses. It works with the material we feed it, through our thought impulses. The subconscious mind will translate into reality a thought driven by fear, just as readily as it will translate into reality a thought driven by courage or faith. — H. Napoleon

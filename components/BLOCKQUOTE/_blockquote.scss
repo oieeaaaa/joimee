@@ -1,0 +1,18 @@
+.blockquote {
+  & > .p {
+    position: relative;
+    font-family: $me;
+    font-style: italic;
+
+    &::before {
+      content: '';
+      position: absolute;
+      height: 100%;
+      top: 0;
+      left: rem(-10);
+      width: rem(5);
+      transform: translateX(-200%);
+      background-color: $persimmon;
+    }
+  }
+}
