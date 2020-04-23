@@ -5,7 +5,7 @@ export const meta = {
   summary: 'Project joimee',
   published: true,
   publishedAt: '2020-03-19',
-  image: '/images/joimee.webp',
+  image: '/images/joimee.png',
   color: '#ff5555',
 };
 
