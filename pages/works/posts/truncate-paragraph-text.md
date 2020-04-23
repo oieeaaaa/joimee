@@ -3,7 +3,7 @@ import Post from 'components/Post/post';
 export const meta = {
   title: 'Truncate paragraph text',
   summary: '',
-  published: true,
+  published: false,
   publishedAt: '2020-01-23',
 };
 
