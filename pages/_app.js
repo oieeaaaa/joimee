@@ -7,6 +7,7 @@ import P from 'components/P/p';
 import H1 from 'components/H1/H1';
 import H2 from 'components/H2/h2';
 import H3 from 'components/H3/h3';
+import H4 from 'components/H4/h4';
 import UL from 'components/UL/ul';
 import OL from 'components/OL/ol';
 import PRE from 'components/PRE/pre';
@@ -21,6 +22,7 @@ const components = {
   h1: H1,
   h2: H2,
   h3: H3,
+  h4: H4,
   ul: UL,
   ol: OL,
   pre: PRE,
