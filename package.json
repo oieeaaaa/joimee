@@ -39,7 +39,6 @@
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react-hooks": "^2.2.0",
     "node-sass": "^4.13.0",
-    "remark-codesandbox": "^0.5.2",
     "styled-jsx-plugin-sass": "^1.0.0",
     "stylelint": "^13.0.0",
     "stylelint-config-recommended-scss": "^4.1.0",
