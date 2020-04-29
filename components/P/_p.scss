@@ -6,6 +6,10 @@
 
   @include md-width;
 
+  @include desktop {
+    font-size: rem(24);
+  }
+
   &.image-wrapper {
     @include overlap-width;
   }
