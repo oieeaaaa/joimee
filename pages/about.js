@@ -34,16 +34,12 @@ const About = () => {
               .
             </p>
             <p className="about__text">
-              I&apos;m young and very passionate in learning. I don't have so much to do
-              with my life other than coding, making designs, and reading books
-              </p>
-            <p className="about__text">
-              I've also fallen in love with writing
-              <br />
-              I love solving problems and learning new concepts
+              I&apos;m very passionate in learning. And I love coding, making
+              designs, and reading books
             </p>
             <p className="about__text">
-              And if I am not around I'm probably playing a song with my guitar or reading some non-fiction book
+              And if I am not around I'm probably playing a song with my guitar
+              or reading some non-fiction book
             </p>
             <p className="about__text">
               Need to talk? You can send me an&nbsp;
