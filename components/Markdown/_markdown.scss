@@ -32,8 +32,12 @@
   }
 
   &-content {
-    em, b, strong {
+    b, strong {
       @include AGaramondPro('Bold');
+    }
+
+    em {
+      @include AGaramondPro('SemiboldItalic');
     }
 
     i {
