@@ -71,7 +71,7 @@ but then things immediately have changed and he is asking me to add some feature
 It suddenly feels like a job to me instead of a side hustle that I'm willing to
 do for free just for fun and to learn more about Flutter
 
-But he is brother and I love him so I have to do these features anyways and fix
+But he is my brother and I love him so I have to do these features anyways and fix
 these freaking bugs!
 
 ## Takeaways
