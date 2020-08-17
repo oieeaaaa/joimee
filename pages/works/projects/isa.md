@@ -13,7 +13,7 @@ export default ({ children }) => <Project meta={meta}>{children}</Project>
 
 ## Tech Stack
 
-1. [Futter](https://nextjs.org/)
+1. [Flutter](https://flutter.dev/)
 
 ## Project link
 [isa.apk](https://drive.google.com/file/d/1nEIzfyUkKh8WjHUi_LerdhXXGdpfBFpx/view)
