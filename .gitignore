@@ -20,6 +20,8 @@
 .env*
 .not-to-commit
 .*.*.swp
+TASK.md
+todo.md
 
 # debug
 npm-debug.log*
