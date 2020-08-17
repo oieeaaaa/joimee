@@ -49,5 +49,5 @@ works (just kidding lol)
 
 ## Takeaways
 Find your blindspots and you will never be bored, one of my blindspots before
-is I'm not sure the music player in Spotify works but now I kinda see it a
-bit differently.
+is I'm not sure how the music player works in Spotify but now I kinda see it a
+bit differently thanks to boredom and this awesome [api](https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement).
