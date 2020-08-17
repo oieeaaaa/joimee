@@ -5,7 +5,7 @@ export const meta = {
   summary: 'Project isa',
   published: true,
   publishedAt: '2020-08-17',
-  image: '/images/isa.png',
+  image: '/images/Isa.png',
   color: '#ffffff',
 };
 
