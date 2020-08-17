@@ -11,9 +11,6 @@ const Project = ({ meta, children }) => (
         <meta name="title" content={meta.title} />
         <meta name="description" key="description" content={meta.summary} />
       </Head>
-      <figure className="markdown-hero">
-        <img className="markdown-hero__img" src={meta.image} alt={meta.title} />
-      </figure>
       <div className="markdown-header">
         <GoBack />
         <h1 className="markdown__title">{meta.title}</h1>

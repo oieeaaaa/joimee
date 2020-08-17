@@ -37,6 +37,7 @@
     "eslint-config-airbnb": "^18.0.0",
     "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.20.6",
     "eslint-plugin-react-hooks": "^2.2.0",
     "node-sass": "^4.13.0",
     "styled-jsx-plugin-sass": "^1.0.0",
