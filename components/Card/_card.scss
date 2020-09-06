@@ -12,10 +12,14 @@
     height: auto;
   }
 
-  &__img-container {
-    border: rem(3) solid transparent;
-    background: $mercury;
+  @include desktop {
+    &:hover &__title {
+      color: $persimmon;
+      transition: color .15s ease;
+    }
+  }
 
+  &__img-container {
     @include aspect-ratio(263, 243);
 
     @include tablet-l {
@@ -37,6 +41,7 @@
     transform-origin: bottom left;
     overflow: hidden;
     text-overflow: ellipsis;
+    color: var(--text);
     transform: translateY(-100%) rotate(90deg);
 
     @include tablet-p {
