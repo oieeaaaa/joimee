@@ -4,7 +4,9 @@ import Link from 'next/link';
 import PostCard from 'components/PostCard/postCard';
 import posts from 'data/posts';
 
-const postsOfTheMonth = posts.filter(post => (new Date(post.publishedAt).getMonth() === (new Date()).getMonth()));
+const postsOfTheMonth = posts.filter(
+  post => (new Date(post.publishedAt).getFullYear() === (new Date()).getFullYear()),
+);
 
 const RecentPosts = () => (
   <section className="recent-posts">
