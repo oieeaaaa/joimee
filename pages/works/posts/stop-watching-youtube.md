@@ -3,7 +3,7 @@ import Post from 'components/Post/post';
 export const meta = {
   title: 'Stop watching Youtube',
   summary: 'Stop watching youtube If...',
-  published: true,
+  published: false,
   publishedAt: '2020-05-20',
 };
 

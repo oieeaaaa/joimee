@@ -3,7 +3,7 @@ import Post from 'components/Post/post';
 export const meta = {
   title: 'Stop Speaking Codes',
   summary: "You should always be careful in choosing your words because words convey meaning",
-  published: true,
+  published: false,
   publishedAt: '2020-05-01',
 };
 
