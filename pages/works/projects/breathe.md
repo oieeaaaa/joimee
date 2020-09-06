@@ -19,5 +19,3 @@ export default ({ children }) => <Project meta={meta}>{children}</Project>
 
 ## Project link
 [Breathe Site](https://breathe-site.myshopify.com/)
-
-Yet another custom shopify theme
