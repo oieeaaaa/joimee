@@ -14,10 +14,6 @@ const Card = ({ title, imgLink, color }) => (
             background-color: ${color};
             border-color: ${color};
           }
-
-          &__title {
-            color: ${color};
-          }
         }
       `}
     </style>
