@@ -6,7 +6,7 @@ export const meta = {
   published: true,
   publishedAt: '2020-08-17',
   image: '/images/Isa.png',
-  color: '#ffffff',
+  color: '#333',
 };
 
 export default ({ children }) => <Project meta={meta}>{children}</Project>
