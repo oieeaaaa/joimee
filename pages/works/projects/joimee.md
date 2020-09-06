@@ -2,7 +2,7 @@ import Project from 'components/Project/project';
 
 export const meta = {
   title: 'Joimee',
-  summary: 'Project joimee',
+  summary: 'Joimee Tan Cajandab\'\s Website: Build from scratch 🤓',
   published: true,
   publishedAt: '2020-03-19',
   image: '/images/joimee.png',

@@ -5,7 +5,10 @@ import RecentProjects from 'components/RecentProjects/recentProjects';
 import RecentPosts from 'components/RecentPosts/recentPosts';
 
 const Home = () => (
-  <Layout title="Home" description="Landing Page">
+  <Layout
+    title="Joimee Tan Cajandab"
+    description="A website built from scratch by Joimee Tan Cajandab who is just a guy who can develop a website"
+  >
     <Hero />
     <RecentProjects />
     <RecentPosts />

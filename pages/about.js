@@ -30,7 +30,8 @@ const About = () => {
           <h1 className="about__title">About me</h1>
           <div className="about__content">
             <p className="about__text">
-              Hi there 🎉, My name is Joimee and I do web and mobile stuff you
+              Hi there 🎉, My name is Joimee Tan Cajandab but you can refer to
+              me using my nickname Bok. I build web/mobile apps you
               can check some of my projects&nbsp;
               <Link href="/works">
                 <a className="about__link">here</a>

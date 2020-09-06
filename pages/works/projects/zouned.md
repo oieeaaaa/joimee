@@ -2,7 +2,7 @@ import Project from 'components/Project/project';
 
 export const meta = {
   title: 'Zouned',
-  summary: 'Project zouned',
+  summary: 'Zouned delivers high quality music to improve your focus & productivity',
   published: true,
   publishedAt: '2020-08-17',
   image: '/images/Zouned.png',

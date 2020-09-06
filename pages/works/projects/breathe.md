@@ -2,7 +2,7 @@ import Project from 'components/Project/project';
 
 export const meta = {
   title: 'Breathe',
-  summary: '',
+  summary: 'Breathe is an e-commerce test site, A custom theme build on top of shopify',
   published: true,
   publishedAt: '2020-09-06',
   image: '/images/breathe.png',

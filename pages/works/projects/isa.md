@@ -2,7 +2,7 @@ import Project from 'components/Project/project';
 
 export const meta = {
   title: 'ISA',
-  summary: 'Project isa',
+  summary: 'ISA is a mobile app that let\'\s you track items and send it as report via email',
   published: true,
   publishedAt: '2020-08-17',
   image: '/images/Isa.png',
