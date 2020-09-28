@@ -30,20 +30,19 @@ const About = () => {
           <h1 className="about__title">About me</h1>
           <div className="about__content">
             <p className="about__text">
-              Hi there 🎉, My name is Joimee Tan Cajandab but you can refer to
-              me using my nickname Bok. I build web/mobile apps you
-              can check some of my projects&nbsp;
+              Hi there 🎉, My name is Joimee Tan Cajandab. I build web/mobile apps for folks
               <Link href="/works">
                 <a className="about__link">here</a>
               </Link>
               .
             </p>
             <p className="about__text">
-              I&apos;m very passionate in learning ❤️. My interests are coding,
-              writing, and reading books.
+              I&apos;m very passionate in learning ❤️  new things. And my
+              current interests are coding, writing, and reading books.
             </p>
             <p className="about__text">
-              If you need some help on your website, or just saying hi. You&apos;re free to
+              If you need some help on your website, or just saying hi. Please
+              don&apos;t hesitate to
               send me an&nbsp;
               <a
                 className="about__link"
@@ -53,7 +52,7 @@ const About = () => {
               >
                 email
               </a>
-              &nbsp;or you can message me thru&nbsp;
+              &nbsp;or you message me thru&nbsp;
               <a
                 className="about__link"
                 href="https://www.facebook.com/joimee.cajandab.921"
@@ -64,8 +63,8 @@ const About = () => {
               </a>
             </p>
             <p className="about__text">
-              And if I am not around I&apos;m probably strumming my acoustic guitar
-              or reading a book 🤓 while taking a break.
+              If I am not around I&apos;m probably strumming my acoustic guitar
+              or reading a book.
             </p>
           </div>
         </div>
