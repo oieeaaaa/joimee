@@ -30,20 +30,15 @@ const About = () => {
           <h1 className="about__title">About me</h1>
           <div className="about__content">
             <p className="about__text">
-              Hi there 🎉, My name is Joimee Tan Cajandab. I build web/mobile apps for folks
-              <Link href="/works">
-                <a className="about__link">here</a>
-              </Link>
-              .
+              I build Mobile & Web infromation systems.
             </p>
             <p className="about__text">
-              I&apos;m very passionate in learning ❤️  new things. And my
-              current interests are coding, writing, and reading books.
+              I&apos;m very passionate in learning new things. My interests are
+              coding, writing, and reading books.
             </p>
             <p className="about__text">
-              If you need some help on your website, or just saying hi. Please
-              don&apos;t hesitate to
-              send me an&nbsp;
+              If you don&apos;t want to deal with technical stuff. Please
+              don&apos;t hesitate to send me an&nbsp;
               <a
                 className="about__link"
                 href="mailto:joimee.cajandab@gmail.com"
@@ -52,7 +47,7 @@ const About = () => {
               >
                 email
               </a>
-              &nbsp;or you message me thru&nbsp;
+              &nbsp;or message me through&nbsp;
               <a
                 className="about__link"
                 href="https://www.facebook.com/joimee.cajandab.921"
@@ -61,10 +56,7 @@ const About = () => {
               >
                 messenger
               </a>
-            </p>
-            <p className="about__text">
-              If I am not around I&apos;m probably strumming my acoustic guitar
-              or reading a book.
+              .
             </p>
           </div>
         </div>
