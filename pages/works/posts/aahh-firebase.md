@@ -11,7 +11,7 @@ export default ({ children }) => <Post meta={meta}>{children}</Post>;
 
 Many developers around the web and mobile have probably tried this BAAS thing
 called "firebase". Also many have said that it's nice, easy, it's developer
-focus yada, yada, yada... A lot of very optimistic feedback
+focus yada, yada, yada... A lot of very optimistic feedback.
 
 So here is my one takeway/feedback after using firebase for 2 months.
 
@@ -24,11 +24,11 @@ So I did that. But the painful part comes when you need to keep your data
 consistent across collections & subcollections.
 
 Look, I'm relatively new to firebase and I'm dying to find a better solution to
-this tedious process of updating each document in every collections &
-subcollections affected.
+this tedious process of updating each document in every collection &
+subcollection affected.
 
 I've been hanging around StackOverflow for hours and found some workarounds
-like batch & transactions but I still feel unsatisfied with these type solutions.
+like batch & transactions but I still feel unsatisfied with these types of solutions.
 
 If you're planning to use firebase for your future apps... Why?
 And if you're already using firebase... Why?
