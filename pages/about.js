@@ -1,6 +1,5 @@
 /* eslint jsx-a11y/accessible-emoji: 0 */
 import React from 'react';
-import Link from 'next/link';
 import Layout from 'components/Layout/layout';
 import ImgLazy from 'components/ImgLazy/imgLazy';
 import gallery from 'data/gallery';
@@ -24,39 +23,24 @@ const About = () => {
   );
 
   return (
-    <Layout title="About" description="Information about Joimee T. Cajandab">
+    <Layout title="About" description="Who is Joimee T. Cajandab?">
       <div className="about">
         <div className="grid">
           <h1 className="about__title">About me</h1>
           <div className="about__content">
             <p className="about__text">
-              I build Mobile & Web infromation systems.
+              I love what I do!
             </p>
             <p className="about__text">
-              I&apos;m very passionate in learning new things. My interests are
-              coding, writing, and reading books.
+              I&apos;m very passionate in learning and exploring new things.
             </p>
             <p className="about__text">
-              If you don&apos;t want to deal with technical stuff. Please
-              don&apos;t hesitate to send me an&nbsp;
-              <a
-                className="about__link"
-                href="mailto:joimee.cajandab@gmail.com"
-                target="_blank"
-                rel="noreferrer"
-              >
-                email
-              </a>
-              &nbsp;or message me through&nbsp;
-              <a
-                className="about__link"
-                href="https://www.facebook.com/joimee.cajandab.921"
-                target="_blank"
-                rel="noreferrer"
-              >
-                messenger
-              </a>
-              .
+              Most of the time I choose to live a solitary life. This keeps me away from
+              any kinds of distraction and allow me to focus on the things that
+              I love. But don&apos;t get me wrong I love being around other people (some people).
+            </p>
+            <p className="about__text">
+              Here are some silly pictures of Me, My friends, and Family below:
             </p>
           </div>
         </div>

@@ -7,7 +7,7 @@ import RecentPosts from 'components/RecentPosts/recentPosts';
 const Home = () => (
   <Layout
     title="Joimee Tan Cajandab"
-    description="A website built from scratch by Joimee Tan Cajandab who is just a guy who can develop a website"
+    description="A website coded by Joimee Tan Cajandab"
   >
     <Hero />
     <RecentProjects />
