@@ -2,7 +2,6 @@ import React from 'react';
 import Heading from 'components/Heading/heading';
 import Link from 'next/link';
 import Card from 'components/Card/card';
-import Loading from 'components/Loading/loading';
 import projects from 'data/projects';
 
 const RecentProjects = () => (
