@@ -17,4 +17,16 @@ export default ({ children }) => <Project meta={meta}>{children}</Project>
 2. Firebase
 
 ## Project link
-[Palit](http://palitph.ml/)
+[https://palitph.ml](https://palitph.ml/)
+
+We've released the raw version in October 18, 2020.
+
+We're still working on some of the important features and awesome feedbacks from our
+friends and co-workers.
+
+Our goal for this app is to have at least 100 active users by the end of 2020.
+
+Our ultimate goal is to have millions of users all over asia and across the
+globe! (Yeah, We're ambitious People)
+
+So, See you on the next release!
