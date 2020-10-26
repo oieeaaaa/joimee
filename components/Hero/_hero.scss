@@ -7,6 +7,8 @@
   }
 
   &__title {
+    $title: &;
+
     grid-column: 4 / -2;
     grid-row: 1 / 1; // makes overlapping
     align-self: center;
@@ -24,6 +26,12 @@
 
     a {
       text-decoration: none;
+
+      @include tablet-p {
+        > #{$title}-text {
+          display: block;
+        }
+      }
     }
   }
 
