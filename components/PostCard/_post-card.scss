@@ -4,14 +4,25 @@
   justify-content: flex-start;
   align-items: flex-start;
 
+  @include desktop {
+    &:hover &__title {
+      color: var(--text);
+      text-decoration: underline;
+    }
+  }
+
   &__title {
     font-weight: 600;
-    text-transform: uppercase;
     letter-spacing: rem(.48);
     color: $persimmon;
 
     @include tablet-p {
       font-size: rem(20);
+      line-height: rem(24);
+    }
+
+    @include desktop {
+      transition: color .15s ease;
     }
   }
 

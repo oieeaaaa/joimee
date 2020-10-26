@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "next",
+    "dev": "rm -rf .next && next",
     "build": "next build",
     "start": "next start",
     "fix:eslint": "eslint --fix ./ --ext .js --ext .jsx",
