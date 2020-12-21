@@ -6,7 +6,7 @@
   transition-property: transform, box-shadow, background-color;
   transition-duration: .25s;
   transition-timing-function: ease;
-  z-index: 9001;
+  z-index: $z-index-header;
   will-change: transform;
 
   &.scrolled {
@@ -25,80 +25,65 @@
     justify-content: space-between;
     padding: rem(20) 0;
 
-    @include tablet-l {
-      .header:not(.scrolled) & {
-        justify-content: center;
-      }
-    }
-
     @include desktop {
       grid-column: 1 / -1;
     }
-  }
 
-  &-nav > &-nav__link:first-child {
-    @include tablet-l {
-      .header:not(.scrolled) & {
-        display: none;
+    &__link {
+      position: relative;
+      text-decoration: none;
+      text-transform: lowercase;
+      line-height: 1.25;
+      font-family: $me;
+      font-weight: 300;
+      color: var(--header-text);
+      letter-spacing: rem(.48);
+
+      @include hover {
+        color: $persimmon;
+      }
+
+      @include tablet-p {
+        font-size: rem(18);
+      }
+
+      &.active {
+        &::before {
+          content: '';
+          position: absolute;
+          display: inline-block;
+          top: 50%;
+          width: rem(10);
+          height: rem(10);
+          transform: translateY(-50%);
+          margin-left: rem(-20);
+          background: $persimmon;
+
+          @include triangle;
+
+          @include tablet-p {
+            width: rem(15);
+            height: rem(15);
+            margin-left: rem(-25);
+
+            @include diamond;
+          }
+
+          @include tablet-l {
+            @include pentagon;
+          }
+
+          @include desktop {
+            @include polygon;
+          }
+        }
       }
     }
-  }
 
-  &-nav > &-nav__link:last-child {
-    @include tablet-l {
-      .header:not(.scrolled) & {
-        display: none;
-      }
+    // center
+    &__link:nth-child(2) {
+      font-weight: bold;
+      text-transform: uppercase;
     }
-  }
-
-  &-nav__link {
-    position: relative;
-    text-decoration: none;
-    text-transform: lowercase;
-    line-height: 1.25;
-    font-family: $me;
-    font-weight: 300;
-    color: var(--header-text);
-    letter-spacing: rem(.48);
-
-    @include tablet-p {
-      font-size: rem(18);
-    }
-  }
-
-  &-nav__link.active::before {
-    content: '';
-    position: absolute;
-    display: inline-block;
-    top: 50%;
-    width: rem(10);
-    height: rem(10);
-    transform: translateY(-50%);
-    margin-left: rem(-20);
-    background: $persimmon;
-
-    @include triangle;
-
-    @include tablet-p {
-      width: rem(15);
-      height: rem(15);
-      margin-left: rem(-25);
-
-      @include diamond;
-    }
-
-    @include tablet-l {
-      @include pentagon;
-    }
-
-    @include desktop {
-      @include polygon;
-    }
-  }
-
-  &-nav__link--center {
-    font-weight: 600;
-    text-transform: uppercase;
   }
 }

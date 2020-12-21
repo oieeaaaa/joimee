@@ -12,6 +12,7 @@ const Header = ({ router, scrollOffset }) => {
   function handleScroll({ bottom, scrolled }) {
     const { current: h } = header;
     if (!h) return;
+
     if (scrolled) {
       h.classList.add('scrolled');
     } else {
@@ -31,11 +32,6 @@ const Header = ({ router, scrollOffset }) => {
 
     return links.map(({ path, name, ariaLabel }) => {
       let className = 'header-nav__link';
-
-      // root beutification
-      if (path === '/') {
-        className += ' header-nav__link--center';
-      }
 
       // show active route
       if (path === `/${currentRoute}`) {
