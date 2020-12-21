@@ -1,0 +1,7 @@
+@mixin font-size($settings) {
+  font-size: rem(nth($settings, 1));
+
+  @if length($settings) > 1 {
+    line-height: nth($settings, 2);
+  }
+}
