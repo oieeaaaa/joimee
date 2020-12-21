@@ -1,26 +1,16 @@
 .text-3D {
   --color: var(--fancy-text); // without expression the value would be literal
+  --transition: .25s ease;
 
   position: relative;
-  font-weight: bold;
-  line-height: 1;
   text-transform: uppercase;
   letter-spacing: rem(2.28);
   color: var(--color);
   z-index: 99;
+  transition: var(--transition);
 
-  @include scaling-font-size(50, 375);
-
-  @include tablet-p {
-    @include scaling-font-size(96, 768);
-  }
-
-  @include tablet-l {
-    @include scaling-font-size(114, 1024);
-  }
-
-  @include desktop {
-    font-size: rem(155);
+  @include hover {
+    color: $persimmon;
   }
 
   &::after {
@@ -33,5 +23,22 @@
     -moz-text-stroke: rem(1) var(--color);
     -o-text-stroke: rem(1) var(--color);
     z-index: -1;
+
+    @include desktop {
+      top: 0;
+      right: 0;
+      transition: var(--transition);
+      transition-property: top, right, text-stroke-color;
+    }
+  }
+
+  @include desktop {
+    &:hover::after {
+      top: 3 / 111 * 100%;
+      right: 3 / 254.344 * 100%;
+      -webkit-text-stroke-color: $persimmon;
+      -moz-text-stroke-color: $persimmon;
+      -o-text-stroke-color: $persimmon;
+    }
   }
 }

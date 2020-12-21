@@ -1,4 +1,6 @@
 .hero {
+  $this: &;
+
   padding: rem(30) 0;
   margin-top: rem(40);
 
@@ -9,18 +11,27 @@
   &__title {
     $title: &;
 
+    @include font-size(50 1);
+
     grid-column: 4 / -2;
-    grid-row: 1 / 1; // makes overlapping
     align-self: center;
-    display: flex;
-    flex-direction: column;
     text-align: right;
+    justify-self: end;
+    width: min-content;
+
+    @include tablet-p {
+      @include font-size(96);
+    }
 
     @include tablet-l {
+      @include font-size(114);
+
       grid-column: 6 / -2;
     }
 
     @include desktop {
+      @include font-size(155);
+
       grid-column: 9 / -1;
     }
 
@@ -44,18 +55,29 @@
 
       display: flex;
       flex-direction: column;
-      align-items: flex-start;
+      align-items: center;
     }
 
     @include desktop {
       grid-column: 1 / 6;
     }
+
+    > #{$this}__nav-item:not(:last-child) {
+      margin-bottom: rem(20);
+    }
   }
 
   &__nav-item {
-    font-size: rem(64);
+    @include font-size(64 1);
+
     font-family: $me;
     color: var(--text);
     text-transform: uppercase;
+    transition: color .25s ease;
+    text-decoration: none;
+
+    @include hover {
+      color: $persimmon;
+    }
   }
 }
