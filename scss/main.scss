@@ -2,6 +2,12 @@
 @import './base/theme';
 @import './base/fonts';
 @import './base/reset';
+@import './base/variables';
+
+// layouts
+@import './layouts/grid';
+@import './layouts/aspect-ratio';
+@import './layouts/alignment';
 
 // utils
 @import './utils/rem';
@@ -9,11 +15,8 @@
 @import './utils/set-width';
 @import './utils/scaling-font-size';
 @import './utils/fonts';
-
-// layouts
-@import './layouts/grid';
-@import './layouts/aspect-ratio';
-@import './layouts/alignment';
+@import './utils/font-size';
+@import './utils/hover';
 
 // commons
 @import './commons/animations';

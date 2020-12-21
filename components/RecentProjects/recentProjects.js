@@ -2,9 +2,8 @@ import React from 'react';
 import Heading from 'components/Heading/heading';
 import Link from 'next/link';
 import Card from 'components/Card/card';
-import projects from 'data/projects';
 
-const RecentProjects = () => (
+const RecentProjects = ({ projects }) => (
   <section className="recent-projects">
     <div className="grid">
       <Heading text="Recent Projects" />

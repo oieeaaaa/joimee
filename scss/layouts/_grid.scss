@@ -21,7 +21,7 @@ $grid-guides: (
 	desktop: (
 		size: 1190px,
 		cols: 20,
-		gutter: 0,
+		gutter: 45px,
 	),
 );
 
@@ -85,6 +85,5 @@ $default-guide: map-get($grid-guides, "mobile");
 
 	@include desktop {
 		@include gen-cols("desktop");
-		padding: 0;
 	}
 }

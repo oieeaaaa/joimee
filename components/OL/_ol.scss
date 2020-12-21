@@ -1,12 +1,12 @@
 .ol {
   margin-bottom: rem(20);
   padding-left: 1em;
-  font-size: rem(18);
 
+  @include font-size(18);
   @include md-width;
 
   @include desktop {
-    font-size: rem(24);
+    @include font-size(24);
   }
 
   & p,

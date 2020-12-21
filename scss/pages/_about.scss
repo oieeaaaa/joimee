@@ -20,10 +20,18 @@
     @include tablet-p {
       margin-bottom: rem(40);
     }
+
+    @include desktop {
+      grid-column: 1 / -1;
+    }
   }
 
   .grid > &__content {
     grid-column: 2 / 8;
+
+    @include desktop {
+      grid-column: 1 / 8;
+    }
   }
 
   &__text {
