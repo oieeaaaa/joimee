@@ -1,4 +1,3 @@
-/* eslint jsx-a11y/accessible-emoji: 0 */
 import React from 'react';
 import Layout from 'components/Layout/layout';
 import ImgLazy from 'components/ImgLazy/imgLazy';
@@ -6,18 +5,31 @@ import gallery from 'data/gallery';
 
 const About = () => {
   const renderImage = images => (
-    images.map(image => {
-      const {
-        src, alt, width, height,
-      } = image;
+    images.map(({
+      src,
+      alt,
+      width,
+      height,
+    }) => {
+      const isPortrait = height > width;
+      const imgBaseSize = 300;
+      const imgHeight = isPortrait ? imgBaseSize * 2 : imgBaseSize;
       let imageClass = 'about__gallery-image';
 
-      if (height > width) {
+      if (isPortrait) {
         imageClass += ' about__gallery-image--portrait';
       }
 
       return (
-        <ImgLazy key={src} src={src} className={imageClass} alt={alt} />
+        <ImgLazy
+          key={src}
+          src={src}
+          className={imageClass}
+          alt={alt}
+          width={imgBaseSize}
+          height={imgHeight}
+          objectFit="cover"
+        />
       );
     })
   );

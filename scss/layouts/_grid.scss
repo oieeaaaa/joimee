@@ -1,4 +1,5 @@
 /* stylelint-disable */
+$max-width: 1280px;
 
 // GUIDES
 $grid-guides: (
@@ -71,7 +72,7 @@ $default-guide: map-get($grid-guides, "mobile");
 .grid {
 	display: grid;
 	grid-template-columns: repeat(map-get($default-guide, "cols"), 1fr);
-	max-width: map-get(get-guide("desktop"), "size");
+	max-width: $max-width;
 	margin: 0 auto;
 
 	@include tablet-p {

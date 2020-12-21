@@ -57,7 +57,9 @@
     grid-auto-rows: minmax(rem(50));
     grid-auto-flow: dense;
     grid-gap: rem(3);
+    margin: 0 auto;
     margin-top: rem(90);
+    max-width: $max-width;
 
     @include tablet-p {
       grid-template-columns: repeat(3, minmax(rem(80), 1fr));

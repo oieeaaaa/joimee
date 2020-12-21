@@ -1,31 +1,22 @@
-import React, { useRef, useEffect } from 'react';
+import Image from 'next/image';
 import PropTypes from 'prop-types';
 
-const ImgLazy = ({ src, className, alt }) => {
-  const container = useRef(null);
-
-  useEffect(() => {
-    if (!container.current) return;
-    const containerEl = container.current;
-    const imgEl = new Image();
-
-    imgEl.src = src;
-    imgEl.alt = alt;
-    imgEl.className = 'img-lazy__content';
-
-    imgEl.onload = () => {
-      containerEl.classList.add('loaded');
-      containerEl.insertAdjacentElement('beforeend', imgEl);
-    };
-  }, [container]);
-
-  return (
-    <div
-      ref={container}
-      className={className ? `img-lazy ${className}` : 'img-lazy'}
+const ImgLazy = ({
+  src, className, alt, ...etc
+}) => (
+  <figure
+    className={className ? `img-lazy ${className}` : 'img-lazy'}
+  >
+    <Image
+      width={500}
+      height={500}
+      src={src}
+      alt={alt}
+      lazy="true"
+      {...etc}
     />
-  );
-};
+  </figure>
+);
 
 ImgLazy.defaultProps = {
   className: '',
